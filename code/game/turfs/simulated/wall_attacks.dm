@@ -139,9 +139,6 @@
 
 	user.setClickCooldown(user.get_attack_speed(W))
 
-	if(!construction_stage && try_graffiti(user, W))
-		return
-
 	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
@@ -414,4 +411,10 @@
 	else if(!istype(W,/obj/item/weapon/rcd) && !istype(W, /obj/item/weapon/reagent_containers))
 		return attack_hand(user)
 
+/turf/simulated/wall/CtrlClick(var/mob/user)
+	var/obj/item/C = user.get_active_hand()
 
+	if(!construction_stage && C && try_graffiti(user, C))
+		return 1
+	else
+		return ..()

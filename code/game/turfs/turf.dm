@@ -289,8 +289,7 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	return FALSE
 
 /turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
-
-	if(!tool.sharp || !can_engrave())
+	if(!tool.sharp || !can_engrave() || !vandal || vandal.incapacitated() || !Adjacent(vandal) || !tool.loc == vandal)
 		return FALSE
 
 	if(jobban_isbanned(vandal, "Graffiti"))
@@ -320,9 +319,6 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	var/obj/effect/decal/writing/graffiti = new(src)
 	graffiti.message = message
 	graffiti.author = vandal.ckey
-
-	if(lowertext(message) == "elbereth")
-		to_chat(vandal, "<span class='notice'>You feel much safer.</span>")
 
 	return TRUE
 

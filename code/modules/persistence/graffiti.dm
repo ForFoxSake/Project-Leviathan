@@ -36,7 +36,8 @@
 
 /obj/effect/decal/writing/examine(mob/user)
 	. = ..()
-	to_chat(user,  "It reads \"[message]\".")
+	. += "It reads: <span class='warning'>\"[message]\"</span>"
+	return .
 
 /obj/effect/decal/writing/attackby(var/obj/item/thing, var/mob/user)
 	if(is_hot(thing))
@@ -58,7 +59,5 @@
 				user.visible_message("<span class='danger'>\The [user] carves some graffiti into \the [loc].</span>")
 				message = "[message] [_message]"
 				author = user.ckey
-				if(lowertext(message) == "elbereth")
-					to_chat(user, "<span class='notice'>You feel much safer.</span>")
 	else
 		. = ..()
