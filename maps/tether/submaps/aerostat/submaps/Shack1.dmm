@@ -88,7 +88,7 @@
 "t" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "v" = (

@@ -279,7 +279,7 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 		/obj/item/weapon/gun/energy/stunrevolver,
 		/obj/item/clothing/accessory/armor/tag/sec,
 		/obj/item/device/flash,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/device/radio/headset/talon,
@@ -318,7 +318,7 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 
 	starts_with = list(
 		/obj/item/clothing/accessory/storage/brown_vest,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/extinguisher,
 		/obj/item/clamp,
 		/obj/item/device/radio/headset/talon,
@@ -352,7 +352,7 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
 		/obj/item/device/radio/headset/talon,
-		/obj/item/device/flashlight/color/orange,
+		/obj/item/device/lighting/color/orange,
 		/obj/item/clothing/head/helmet/space/void/refurb/pilot/talon,
 		/obj/item/clothing/suit/space/void/refurb/pilot/talon,
 		/obj/item/weapon/tank/oxygen,

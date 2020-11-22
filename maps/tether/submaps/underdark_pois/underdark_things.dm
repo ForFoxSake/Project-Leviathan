@@ -178,7 +178,7 @@
 							/obj/item/weapon/ore/uranium,
 							/obj/item/weapon/ore/uranium),
 				prob(2);list(
-							/obj/item/device/flashlight/lantern,
+							/obj/item/device/lighting/lantern,
 							/obj/item/clothing/glasses/material,
 							/obj/item/weapon/ore/diamond,
 							/obj/item/weapon/ore/diamond,

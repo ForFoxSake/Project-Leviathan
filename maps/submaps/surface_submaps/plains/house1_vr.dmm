@@ -98,7 +98,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "aw" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "ax" = (
@@ -163,7 +163,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aH" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aI" = (
@@ -202,7 +202,7 @@
 /area/submap/house1)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/house1)
 "aP" = (
@@ -236,7 +236,7 @@
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aV" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aW" = (
@@ -261,7 +261,7 @@
 "ba" = (
 /obj/structure/table/woodentable,
 /obj/random/action_figure,
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/house1)
 "bb" = (

@@ -49,7 +49,7 @@
 /area/tcommsat/computer)
 "ah" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/computer)
 "ai" = (

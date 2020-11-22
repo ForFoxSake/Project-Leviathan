@@ -63,7 +63,7 @@
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/head/soft/purple,
 		/obj/item/clothing/head/beret/purple,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/caution = 4,
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/storage/bag/trash,

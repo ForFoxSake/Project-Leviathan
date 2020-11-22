@@ -88,27 +88,27 @@
 
 /datum/gear/utility/flashlight
 	display_name = "flashlight"
-	path = /obj/item/device/flashlight
+	path = /obj/item/device/lighting
 
 /datum/gear/utility/flashlight_blue
 	display_name = "flashlight, blue"
-	path = /obj/item/device/flashlight/color
+	path = /obj/item/device/lighting/color
 
 /datum/gear/utility/flashlight_orange
 	display_name = "flashlight, orange"
-	path = /obj/item/device/flashlight/color/orange
+	path = /obj/item/device/lighting/color/orange
 
 /datum/gear/utility/flashlight_red
 	display_name = "flashlight, red"
-	path = /obj/item/device/flashlight/color/red
+	path = /obj/item/device/lighting/color/red
 
 /datum/gear/utility/flashlight_yellow
 	display_name = "flashlight, yellow"
-	path = /obj/item/device/flashlight/color/yellow
+	path = /obj/item/device/lighting/color/yellow
 
 /datum/gear/utility/maglight
 	display_name = "flashlight, maglight"
-	path = /obj/item/device/flashlight/maglight
+	path = /obj/item/device/lighting/maglight
 	cost = 2
 
 /datum/gear/utility/battery

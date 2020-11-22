@@ -110,7 +110,7 @@
 			/obj/item/clothing/shoes/black,
 			/obj/item/device/analyzer,
 			/obj/item/weapon/storage/bag/ore,
-			/obj/item/device/flashlight/lantern,
+			/obj/item/device/lighting/lantern,
 			/obj/item/weapon/shovel,
 			/obj/item/weapon/pickaxe,
 			/obj/item/weapon/mining_scanner,

@@ -229,7 +229,7 @@
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
 "aV" = (
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
 "aW" = (

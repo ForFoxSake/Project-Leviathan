@@ -30,13 +30,13 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/clean/item_to_spawn()
 	return pick(prob(10);/obj/random/contraband,
-				prob(2);/obj/item/device/flashlight/flare,
-				prob(2);/obj/item/device/flashlight/glowstick,
-				prob(2);/obj/item/device/flashlight/glowstick/blue,
-				prob(1);/obj/item/device/flashlight/glowstick/orange,
-				prob(1);/obj/item/device/flashlight/glowstick/red,
-				prob(1);/obj/item/device/flashlight/glowstick/yellow,
-				prob(1);/obj/item/device/flashlight/pen,
+				prob(2);/obj/item/device/lighting/flare,
+				prob(2);/obj/item/device/lighting/glowstick,
+				prob(2);/obj/item/device/lighting/glowstick/blue,
+				prob(1);/obj/item/device/lighting/glowstick/orange,
+				prob(1);/obj/item/device/lighting/glowstick/red,
+				prob(1);/obj/item/device/lighting/glowstick/yellow,
+				prob(1);/obj/item/device/lighting/pen,
 				prob(4);/obj/item/weapon/cell,
 				prob(4);/obj/item/weapon/cell/device,
 				prob(3);/obj/item/weapon/cell/high,
@@ -128,7 +128,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/security/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/flashlight/maglight,
+				prob(2);/obj/item/device/lighting/maglight,
 				prob(2);/obj/item/device/flash,
 				prob(1);/obj/item/weapon/cell/device/weapon,
 				prob(1);/obj/item/clothing/mask/gas/swat,
@@ -225,7 +225,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/engineering/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/flashlight/maglight,
+				prob(2);/obj/item/device/lighting/maglight,
 				prob(3);/obj/item/clothing/mask/gas/half,
 				prob(2);/obj/item/clothing/mask/balaclava,
 				prob(2);/obj/item/weapon/storage/briefcase/inflatable,
@@ -295,7 +295,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/cargo/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(3);/obj/item/device/flashlight/lantern,
+				prob(3);/obj/item/device/lighting/lantern,
 				prob(4);/obj/item/weapon/pickaxe,
 				prob(5);/obj/item/weapon/storage/backpack/industrial,
 				prob(5);/obj/item/weapon/storage/backpack/satchel/norm,

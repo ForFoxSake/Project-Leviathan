@@ -17,7 +17,7 @@
 		/obj/item/clothing/glasses/goggles,
 		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
 		/obj/item/stack/medical/bruise_pack,
-		/obj/item/device/flashlight/glowstick,
+		/obj/item/device/lighting/glowstick,
 		/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
 		/obj/item/clothing/mask/breath
 	)

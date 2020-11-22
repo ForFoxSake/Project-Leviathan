@@ -87,7 +87,7 @@
 /area/submap/virgo2/Rockybase)
 "ar" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/submap/virgo2/Rockybase)
 "as" = (

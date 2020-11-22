@@ -65,7 +65,7 @@
 				/obj/item/clothing/suit/space/anomaly,
 				/obj/item/clothing/head/helmet/space/anomaly,
 				/obj/item/weapon/storage/belt/archaeology,
-				/obj/item/device/flashlight/lantern,
+				/obj/item/device/lighting/lantern,
 				/obj/item/device/core_sampler,
 				/obj/item/device/gps,
 				/obj/item/device/beacon_locator,

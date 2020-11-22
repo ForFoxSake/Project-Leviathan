@@ -1,5 +1,5 @@
-/obj/item/device/flashlight
-	name = "flashlight"
+/obj/item/device/lighting
+	name = "small lamp"
 	desc = "A hand-held emergency light."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flashlight"
@@ -18,7 +18,7 @@
 	var/power_usage
 	var/power_use = 1
 
-/obj/item/device/flashlight/Initialize()
+/obj/item/device/lighting/Initialize()
 	. = ..()
 
 	if(power_use && cell_type)
@@ -26,25 +26,25 @@
 		brightness_levels = list("low" = 0.25, "medium" = 0.5, "high" = 1)
 		power_usage = brightness_levels[brightness_level]
 	else
-		verbs -= /obj/item/device/flashlight/verb/toggle
+		verbs -= /obj/item/device/lighting/verb/toggle
 	
 	update_icon()
 
-/obj/item/device/flashlight/Destroy()
+/obj/item/device/lighting/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	qdel_null(cell)
 	return ..()
 
-/obj/item/device/flashlight/get_cell()
+/obj/item/device/lighting/get_cell()
 	return cell
 
-/obj/item/device/flashlight/verb/toggle()
+/obj/item/device/lighting/verb/toggle()
 	set name = "Toggle Flashlight Brightness"
 	set category = "Object"
 	set src in usr
 	set_brightness(usr)
 
-/obj/item/device/flashlight/proc/set_brightness(mob/user as mob)
+/obj/item/device/lighting/proc/set_brightness(mob/user as mob)
 	var/choice = input("Choose a brightness level.") as null|anything in brightness_levels
 	if(choice)
 		brightness_level = choice
@@ -52,7 +52,7 @@
 		to_chat(user, "<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>")
 		update_icon()
 
-/obj/item/device/flashlight/process()
+/obj/item/device/lighting/process()
 	if(!on || !cell)
 		return PROCESS_KILL
 
@@ -65,7 +65,7 @@
 			update_icon()
 			return PROCESS_KILL
 
-/obj/item/device/flashlight/update_icon()
+/obj/item/device/lighting/update_icon()
 	if(on)
 		icon_state = "[initial(icon_state)]-on"
 
@@ -80,7 +80,7 @@
 		icon_state = "[initial(icon_state)]"
 		set_light(0)
 
-/obj/item/device/flashlight/examine(mob/user)
+/obj/item/device/lighting/examine(mob/user)
 	. = ..()
 	if(power_use && brightness_level)
 		. += "\The [src] is set to [brightness_level]."
@@ -96,7 +96,7 @@
 			else if(cell.charge > cell.maxcharge*0.75 && cell.charge <= cell.maxcharge)
 				. += "It appears to have a high amount of power remaining."
 
-/obj/item/device/flashlight/attack_self(mob/user)
+/obj/item/device/lighting/attack_self(mob/user)
 	if(power_use)
 		if(!isturf(user.loc))
 			to_chat(user, "You cannot turn the light on while in this [user.loc].") //To prevent some lighting anomalities.
@@ -114,12 +114,12 @@
 	user.update_action_buttons()
 	return 1
 
-/obj/item/device/flashlight/emp_act(severity)
+/obj/item/device/lighting/emp_act(severity)
 	for(var/obj/O in contents)
 		O.emp_act(severity)
 	..()
 
-/obj/item/device/flashlight/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/device/lighting/attack(mob/living/M as mob, mob/living/user as mob)
 	add_fingerprint(user)
 	if(on && user.zone_sel.selecting == O_EYES)
 
@@ -168,7 +168,7 @@
 	else
 		return ..()
 
-/obj/item/device/flashlight/attack_hand(mob/user as mob)
+/obj/item/device/lighting/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
 		if(cell)
 			cell.update_icon()
@@ -183,7 +183,7 @@
 	else
 		return ..()
 
-/obj/item/device/flashlight/MouseDrop(obj/over_object as obj)
+/obj/item/device/lighting/MouseDrop(obj/over_object as obj)
 	if(!canremove)
 		return
 
@@ -215,7 +215,7 @@
 				usr.put_in_l_hand(src)
 		src.add_fingerprint(usr)
 
-/obj/item/device/flashlight/attackby(obj/item/weapon/W, mob/user as mob)
+/obj/item/device/lighting/attackby(obj/item/weapon/W, mob/user as mob)
 	if(power_use)
 		if(istype(W, /obj/item/weapon/cell))
 			if(istype(W, /obj/item/weapon/cell/device))
@@ -234,7 +234,7 @@
 	else
 		..()
 
-/obj/item/device/flashlight/pen
+/obj/item/device/lighting/pen
 	name = "penlight"
 	desc = "A pen-sized light, used by medical staff."
 	icon_state = "penlight"
@@ -244,27 +244,27 @@
 	w_class = ITEMSIZE_TINY
 	power_use = 0
 
-/obj/item/device/flashlight/color	//Default color is blue, just roll with it.
+/obj/item/device/lighting/color	//Default color is blue, just roll with it.
 	name = "blue flashlight"
 	desc = "A hand-held emergency light. This one is blue."
 	icon_state = "flashlight_blue"
 
-/obj/item/device/flashlight/color/red
+/obj/item/device/lighting/color/red
 	name = "red flashlight"
 	desc = "A hand-held emergency light. This one is red."
 	icon_state = "flashlight_red"
 
-/obj/item/device/flashlight/color/orange
+/obj/item/device/lighting/color/orange
 	name = "orange flashlight"
 	desc = "A hand-held emergency light. This one is orange."
 	icon_state = "flashlight_orange"
 
-/obj/item/device/flashlight/color/yellow
+/obj/item/device/lighting/color/yellow
 	name = "yellow flashlight"
 	desc = "A hand-held emergency light. This one is yellow."
 	icon_state = "flashlight_yellow"
 
-/obj/item/device/flashlight/maglight
+/obj/item/device/lighting/maglight
 	name = "maglight"
 	desc = "A very, very heavy duty flashlight."
 	icon_state = "maglight"
@@ -276,7 +276,7 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 50)
 	hitsound = "swing_hit"
 
-/obj/item/device/flashlight/drone
+/obj/item/device/lighting/drone
 	name = "low-power flashlight"
 	desc = "A miniature lamp, that might be used by small robots."
 	icon_state = "penlight"
@@ -286,7 +286,7 @@
 	power_use = 0
 
 // the desk lamps are a bit special
-/obj/item/device/flashlight/lamp
+/obj/item/device/lighting/lamp
 	name = "desk lamp"
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
@@ -299,14 +299,14 @@
 
 
 // green-shaded desk lamp
-/obj/item/device/flashlight/lamp/green
+/obj/item/device/lighting/lamp/green
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
 	center_of_mass = list("x" = 15,"y" = 11)
 	brightness_on = 5
 	flashlight_colour = "#FFC58F"
 
-/obj/item/device/flashlight/lamp/verb/toggle_light()
+/obj/item/device/lighting/lamp/verb/toggle_light()
 	set name = "Toggle light"
 	set category = "Object"
 	set src in oview(1)
@@ -316,7 +316,7 @@
 
 // FLARES
 
-/obj/item/device/flashlight/flare
+/obj/item/device/lighting/flare
 	name = "flare"
 	desc = "A red standard-issue flare. There are instructions on the side reading 'pull cord, make light'."
 	w_class = ITEMSIZE_SMALL
@@ -331,11 +331,11 @@
 	var/produce_heat = 1500
 	power_use = 0
 
-/obj/item/device/flashlight/flare/New()
+/obj/item/device/lighting/flare/New()
 	fuel = rand(800, 1000) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.
 	..()
 
-/obj/item/device/flashlight/flare/process()
+/obj/item/device/lighting/flare/process()
 	var/turf/pos = get_turf(src)
 	if(pos)
 		pos.hotspot_expose(produce_heat, 5)
@@ -346,13 +346,13 @@
 			src.icon_state = "[initial(icon_state)]-empty"
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/device/flashlight/flare/proc/turn_off()
+/obj/item/device/lighting/flare/proc/turn_off()
 	on = 0
 	src.force = initial(src.force)
 	src.damtype = initial(src.damtype)
 	update_icon()
 
-/obj/item/device/flashlight/flare/attack_self(mob/user)
+/obj/item/device/lighting/flare/attack_self(mob/user)
 
 	// Usual checks
 	if(!fuel)
@@ -369,7 +369,7 @@
 		src.damtype = "fire"
 		START_PROCESSING(SSobj, src)
 
-/obj/item/device/flashlight/flare/proc/ignite() //Used for flare launchers.
+/obj/item/device/lighting/flare/proc/ignite() //Used for flare launchers.
 	on = !on
 	update_icon()
 	force = on_damage
@@ -379,7 +379,7 @@
 
 //Glowsticks
 
-/obj/item/device/flashlight/glowstick
+/obj/item/device/lighting/glowstick
 	name = "green glowstick"
 	desc = "A green military-grade glowstick."
 	w_class = ITEMSIZE_SMALL
@@ -391,11 +391,11 @@
 	var/fuel = 0
 	power_use = 0
 
-/obj/item/device/flashlight/glowstick/New()
+/obj/item/device/lighting/glowstick/New()
 	fuel = rand(1600, 2000)
 	..()
 
-/obj/item/device/flashlight/glowstick/process()
+/obj/item/device/lighting/glowstick/process()
 	fuel = max(fuel - 1, 0)
 	if(!fuel || !on)
 		turn_off()
@@ -403,11 +403,11 @@
 			src.icon_state = "[initial(icon_state)]-empty"
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/device/flashlight/glowstick/proc/turn_off()
+/obj/item/device/lighting/glowstick/proc/turn_off()
 	on = 0
 	update_icon()
 
-/obj/item/device/flashlight/glowstick/attack_self(mob/user)
+/obj/item/device/lighting/glowstick/attack_self(mob/user)
 
 	if(!fuel)
 		to_chat(user, "<span class='notice'>The glowstick has already been turned on.</span>")
@@ -420,35 +420,35 @@
 		user.visible_message("<span class='notice'>[user] cracks and shakes \the [name].</span>", "<span class='notice'>You crack and shake \the [src], turning it on!</span>")
 		START_PROCESSING(SSobj, src)
 
-/obj/item/device/flashlight/glowstick/red
+/obj/item/device/lighting/glowstick/red
 	name = "red glowstick"
 	desc = "A red military-grade glowstick."
 	flashlight_colour = "#FC0F29"
 	icon_state = "glowstick_red"
 	item_state = "glowstick_red"
 
-/obj/item/device/flashlight/glowstick/blue
+/obj/item/device/lighting/glowstick/blue
 	name = "blue glowstick"
 	desc = "A blue military-grade glowstick."
 	flashlight_colour = "#599DFF"
 	icon_state = "glowstick_blue"
 	item_state = "glowstick_blue"
 
-/obj/item/device/flashlight/glowstick/orange
+/obj/item/device/lighting/glowstick/orange
 	name = "orange glowstick"
 	desc = "A orange military-grade glowstick."
 	flashlight_colour = "#FA7C0B"
 	icon_state = "glowstick_orange"
 	item_state = "glowstick_orange"
 
-/obj/item/device/flashlight/glowstick/yellow
+/obj/item/device/lighting/glowstick/yellow
 	name = "yellow glowstick"
 	desc = "A yellow military-grade glowstick."
 	flashlight_colour = "#FEF923"
 	icon_state = "glowstick_yellow"
 	item_state = "glowstick_yellow"
 
-/obj/item/device/flashlight/slime
+/obj/item/device/lighting/slime
 	gender = PLURAL
 	name = "glowing slime extract"
 	desc = "A slimy ball that appears to be glowing from bioluminesence."
@@ -461,12 +461,12 @@
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
 
-/obj/item/device/flashlight/slime/New()
+/obj/item/device/lighting/slime/New()
 	..()
 	set_light(brightness_on, flashlight_power, flashlight_colour)
 
-/obj/item/device/flashlight/slime/update_icon()
+/obj/item/device/lighting/slime/update_icon()
 	return
 
-/obj/item/device/flashlight/slime/attack_self(mob/user)
+/obj/item/device/lighting/slime/attack_self(mob/user)
 	return //Bio-luminescence does not toggle.

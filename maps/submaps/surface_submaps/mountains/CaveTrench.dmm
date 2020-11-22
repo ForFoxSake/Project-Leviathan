@@ -20,7 +20,7 @@
 "t" = (/obj/structure/table/steel,/obj/item/robot_parts/robot_component/actuator,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)
 "u" = (/obj/effect/decal/cleanable/blood,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)
 "v" = (/obj/structure/simple_door/wood,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)
-"w" = (/obj/structure/table/woodentable,/obj/item/device/flashlight/lamp,/turf/simulated/floor/holofloor/wood,/area/submap/CaveTrench)
+"w" = (/obj/structure/table/woodentable,/obj/item/device/lighting/lamp,/turf/simulated/floor/holofloor/wood,/area/submap/CaveTrench)
 "x" = (/obj/structure/table/steel,/obj/item/device/robotanalyzer,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)
 "y" = (/obj/structure/table/steel,/obj/item/weapon/storage/toolbox,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)
 "z" = (/obj/structure/table/bench/steel,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/CaveTrench)

@@ -363,7 +363,7 @@
 /area/submap/Diner)
 "bj" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/lino,
 /area/submap/Diner)
 "bk" = (

@@ -255,7 +255,7 @@
 /area/awaymission/wwmines)
 "aY" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/wwmines)
 "aZ" = (

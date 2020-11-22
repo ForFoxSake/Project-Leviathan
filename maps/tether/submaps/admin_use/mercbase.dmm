@@ -1535,12 +1535,12 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "dark"
@@ -1912,13 +1912,13 @@
 /area/antag/antag_base)
 "cJ" = (
 /obj/structure/table/rack,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},

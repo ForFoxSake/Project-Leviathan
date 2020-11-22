@@ -66,6 +66,6 @@
 	uniform = /obj/item/clothing/under/rank/security
 	suit = /obj/item/clothing/suit/armor/pcarrier/medium/security
 	suit_store = /obj/item/clothing/head/helmet
-	l_pocket = /obj/item/device/flashlight/flare
+	l_pocket = /obj/item/device/lighting/flare
 	id_type = /obj/item/weapon/card/id/security
 	pda_type = /obj/item/device/pda/security

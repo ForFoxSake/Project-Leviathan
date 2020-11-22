@@ -10,7 +10,7 @@
 /obj/effect/overlay/cultify()
 	return
 
-/obj/item/device/flashlight/lamp/cultify()
+/obj/item/device/lighting/lamp/cultify()
 	new /obj/structure/cult/pylon(loc)
 	..()
 

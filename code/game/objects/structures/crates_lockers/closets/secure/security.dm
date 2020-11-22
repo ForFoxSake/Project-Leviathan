@@ -100,7 +100,7 @@
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/clothing/mask/gas/half)
 
 /obj/structure/closet/secure_closet/hos/Initialize()
@@ -144,7 +144,7 @@
 		/obj/item/clothing/head/beret/sec/corporate/warden,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/device/megaphone,
 		/obj/item/clothing/mask/gas/half)
 
@@ -176,7 +176,7 @@
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
 		/obj/item/device/hailer,
-		/obj/item/device/flashlight/flare,
+		/obj/item/device/lighting/flare,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/under/rank/security/corp,
@@ -185,7 +185,7 @@
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight)
+		/obj/item/device/lighting/maglight)
 
 /obj/structure/closet/secure_closet/security/Initialize()
 	if(prob(50))
@@ -235,7 +235,7 @@
 		/obj/item/clothing/suit/storage/vest/detective,
 		/obj/item/taperoll/police,
 		/obj/item/clothing/accessory/holster/armpit,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/weapon/reagent_containers/food/drinks/flask/detflask,
 		/obj/item/weapon/storage/briefcase/crimekit,
 		/obj/item/device/taperecorder,

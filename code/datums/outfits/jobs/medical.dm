@@ -34,7 +34,7 @@
 	uniform = /obj/item/clothing/under/rank/medical
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_hand = /obj/item/weapon/storage/firstaid/regular
-	r_pocket = /obj/item/device/flashlight/pen
+	r_pocket = /obj/item/device/lighting/pen
 	id_type = /obj/item/weapon/card/id/medical
 
 /decl/hierarchy/outfit/job/medical/doctor/emergency_physician
@@ -83,7 +83,7 @@
 	uniform = /obj/item/clothing/under/rank/geneticist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/weapon/storage/backpack/genetics
-	r_pocket = /obj/item/device/flashlight/pen
+	r_pocket = /obj/item/device/lighting/pen
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/gen
 	id_type = /obj/item/weapon/card/id/medical
 	pda_type = /obj/item/device/pda/geneticist

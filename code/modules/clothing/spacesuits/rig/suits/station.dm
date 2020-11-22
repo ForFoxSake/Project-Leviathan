@@ -32,7 +32,7 @@
 	offline_vision_restriction = 0
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/storage,
@@ -79,7 +79,7 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/industrial
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/storage,
@@ -117,7 +117,7 @@
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/eva
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/storage,
@@ -164,7 +164,7 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/ce //VOREStation Add
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/storage,
@@ -207,7 +207,7 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/hazmat
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/stack/flag,
@@ -252,7 +252,7 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/medical
 
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/storage,
@@ -292,7 +292,7 @@
 
 	allowed = list(
 		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/melee/baton,

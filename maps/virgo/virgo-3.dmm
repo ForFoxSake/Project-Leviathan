@@ -124,7 +124,7 @@
 "cL" = (/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/turf/simulated/floor/tiled/dark,/area/tcommsat/computer)
 "cM" = (/obj/structure/table/standard,/obj/item/weapon/paper_bin,/obj/item/weapon/pen/blue{pixel_x = -3; pixel_y = 2},/turf/simulated/floor/tiled/dark,/area/tcommsat/computer)
 "cN" = (/turf/simulated/floor/tiled,/area/tcommsat/computer)
-"cO" = (/obj/structure/table/standard,/obj/item/device/flashlight/lamp,/turf/simulated/floor/tiled/dark,/area/tcommsat/computer)
+"cO" = (/obj/structure/table/standard,/obj/item/device/lighting/lamp,/turf/simulated/floor/tiled/dark,/area/tcommsat/computer)
 "cP" = (/obj/item/device/radio/intercom{name = "Station Intercom (General)"; pixel_x = -29; pixel_y = 0},/turf/simulated/floor/tiled,/area/tcommsat/computer)
 "cQ" = (/obj/machinery/computer/telecomms/monitor{network = "tcommsat"},/obj/item/device/radio/intercom{name = "General Listening Channel"; pixel_x = 28; pixel_y = 0},/turf/simulated/floor/tiled/dark,/area/tcommsat/computer)
 "cR" = (/obj/structure/window/reinforced{dir = 4},/turf/space,/area/tcomsat)

@@ -68,7 +68,7 @@
 /area/wizard_station)
 "ak" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	on = 0;
 	pixel_x = -3;
 	pixel_y = 8

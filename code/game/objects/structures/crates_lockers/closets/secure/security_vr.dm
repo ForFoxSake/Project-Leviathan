@@ -45,7 +45,7 @@
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight)
+		/obj/item/device/lighting/maglight)
 
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
@@ -68,11 +68,11 @@
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
 		/obj/item/device/hailer,
-		/obj/item/device/flashlight/flare,
+		/obj/item/device/lighting/flare,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/cell/device/weapon,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/clothing/head/soft/nanotrasen,
 		/obj/item/clothing/head/beret/nanotrasen,
 		/obj/item/clothing/under/nanotrasen/security,
@@ -123,7 +123,7 @@
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
@@ -164,7 +164,7 @@
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/weapon/storage/box/holobadge,
 		/obj/item/clothing/head/beret/sec/corporate/warden,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/device/lighting/maglight,
 		/obj/item/device/megaphone,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/boots/jackboots,

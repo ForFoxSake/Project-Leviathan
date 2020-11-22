@@ -56,7 +56,7 @@
 /area/submap/virgo2/Manor1)
 "am" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
 "an" = (
@@ -85,7 +85,7 @@
 /area/submap/virgo2/Manor1)
 "at" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/effect/decal/cleanable/blood/gibs/robot,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
@@ -125,12 +125,12 @@
 /area/submap/virgo2/Manor1)
 "aC" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/maglight,
+/obj/item/device/lighting/maglight,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
 "aD" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
 "aE" = (
@@ -518,7 +518,7 @@
 /area/submap/virgo2/Manor1)
 "cd" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
 "ce" = (

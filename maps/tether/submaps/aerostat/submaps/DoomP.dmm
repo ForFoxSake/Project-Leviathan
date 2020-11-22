@@ -397,7 +397,7 @@
 /area/submap/virgo2/DoomP)
 "bw" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
 	},

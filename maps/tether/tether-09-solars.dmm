@@ -7062,7 +7062,7 @@
 /area/rnd/outpost/anomaly_lab/analysis)
 "mN" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/outpost/anomaly_lab/analysis)
 "mO" = (

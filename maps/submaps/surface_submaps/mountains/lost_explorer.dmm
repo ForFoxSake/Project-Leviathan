@@ -33,7 +33,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/lost_explorer)
 "i" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/lost_explorer)
 

@@ -3957,7 +3957,7 @@
 	dir = 9
 	},
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/security/interrogation)
 "gc" = (
@@ -9580,11 +9580,11 @@
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "oI" = (
-/obj/item/device/flashlight{
+/obj/item/device/lighting{
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/item/device/flashlight{
+/obj/item/device/lighting{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -12660,11 +12660,11 @@
 /area/medical/resleeving)
 "tW" = (
 /obj/structure/table/glass,
-/obj/item/device/flashlight/pen{
+/obj/item/device/lighting/pen{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/flashlight/pen{
+/obj/item/device/lighting/pen{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -13207,7 +13207,7 @@
 /area/medical/psych)
 "uV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	dir = 2;
 	pixel_x = -5;
 	pixel_y = 4
@@ -14296,7 +14296,7 @@
 "wM" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/lights/mixed,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /obj/item/device/radio{
 	pixel_x = -4
 	},
@@ -22389,7 +22389,7 @@
 /area/maintenance/station/sec_lower)
 "Xk" = (
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp{
+/obj/item/device/lighting/lamp{
 	pixel_y = 10
 	},
 /turf/simulated/floor,

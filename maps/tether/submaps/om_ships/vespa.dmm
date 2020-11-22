@@ -4542,7 +4542,7 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_vest,
 /obj/item/clothing/accessory/badge/corporate_tag/hephaestus,
-/obj/item/device/flashlight/maglight,
+/obj/item/device/lighting/maglight,
 /obj/item/device/megaphone,
 /obj/item/device/radio,
 /obj/item/weapon/melee/baton,
@@ -8628,10 +8628,10 @@
 	dir = 1
 	},
 /obj/structure/closet,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/maglight,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/expedition)
 "pM" = (
@@ -12730,7 +12730,7 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_vest,
 /obj/item/clothing/accessory/badge/corporate_tag/hephaestus,
-/obj/item/device/flashlight/maglight,
+/obj/item/device/lighting/maglight,
 /obj/item/device/radio,
 /obj/item/weapon/melee/baton,
 /turf/simulated/floor/tiled/techfloor,

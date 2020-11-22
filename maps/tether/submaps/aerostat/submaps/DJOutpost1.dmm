@@ -287,7 +287,7 @@
 /area/submap/virgo2/DJOutpost1)
 "Q" = (
 /obj/structure/table/rack,
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /obj/item/device/gps{
 	gps_tag = "Sif Free Radio"
 	},

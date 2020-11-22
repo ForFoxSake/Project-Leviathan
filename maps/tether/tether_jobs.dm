@@ -155,7 +155,7 @@
 	uniform = /obj/item/clothing/under/rank/medical
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_hand = /obj/item/weapon/storage/firstaid/regular
-	r_pocket = /obj/item/device/flashlight/pen
+	r_pocket = /obj/item/device/lighting/pen
 
 /decl/hierarchy/outfit/job/talon_security
 	name = OUTFIT_JOB_NAME("Talon Security")

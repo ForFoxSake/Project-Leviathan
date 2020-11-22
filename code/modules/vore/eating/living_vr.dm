@@ -636,9 +636,9 @@
 
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
 
-		if(istype(I,/obj/item/device/flashlight/flare) || istype(I,/obj/item/weapon/flame/match) || istype(I,/obj/item/weapon/storage/box/matches))
+		if(istype(I,/obj/item/device/lighting/flare) || istype(I,/obj/item/weapon/flame/match) || istype(I,/obj/item/weapon/storage/box/matches))
 			to_chat(src, "<span class='notice'>You can taste the flavor of spicy cardboard.</span>")
-		else if(istype(I,/obj/item/device/flashlight/glowstick))
+		else if(istype(I,/obj/item/device/lighting/glowstick))
 			to_chat(src, "<span class='notice'>You found out the glowy juice only tastes like regret.</span>")
 		else if(istype(I,/obj/item/trash/cigbutt))
 			to_chat(src, "<span class='notice'>You can taste the flavor of bitter ash. Classy.</span>")

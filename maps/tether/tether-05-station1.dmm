@@ -6462,7 +6462,7 @@
 	on = 1
 	},
 /obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /obj/item/weapon/reagent_containers/food/snacks/donut/jelly,
 /turf/simulated/floor/wood,
 /area/hallway/station/atrium)
@@ -8843,7 +8843,7 @@
 /area/maintenance/abandonedlibraryconference)
 "aqV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -9635,7 +9635,7 @@
 /area/tether/station/visitorhallway)
 "asC" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -12496,7 +12496,7 @@
 /area/bridge/secondary/teleporter)
 "axs" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -18779,7 +18779,7 @@
 	pixel_y = 4
 	},
 /obj/item/clothing/glasses/welding/superior,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "baI" = (
@@ -20607,8 +20607,8 @@
 "bXs" = (
 /obj/structure/closet/crate,
 /obj/item/clothing/mask/gas,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,

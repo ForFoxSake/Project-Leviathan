@@ -14,7 +14,7 @@
 "n" = (/obj/item/weapon/ore/gold,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/AMine1)
 "o" = (/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/AMine1)
 "p" = (/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/gold,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/AMine1)
-"q" = (/obj/structure/table/standard,/obj/item/device/flashlight/lamp,/turf/simulated/floor/tiled,/area/submap/cave/AMine1)
+"q" = (/obj/structure/table/standard,/obj/item/device/lighting/lamp,/turf/simulated/floor/tiled,/area/submap/cave/AMine1)
 "r" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/obj/machinery/light,/turf/simulated/floor/tiled,/area/submap/cave/AMine1)
 "s" = (/obj/structure/window/reinforced/full,/turf/simulated/wall,/area/submap/cave/AMine1)
 "t" = (/obj/machinery/light{ icon_state = "tube1"; dir = 4},/turf/simulated/floor/tiled,/area/submap/cave/AMine1)

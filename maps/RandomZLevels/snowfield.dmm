@@ -221,7 +221,7 @@
 "em" = (/obj/structure/closet/crate/secure/weapon,/obj/item/weapon/gun/projectile/shotgun/pump/rifle,/turf/simulated/floor/tiled/dark,/area/awaymission/snowfield/outside)
 "en" = (/obj/structure/coatrack,/turf/simulated/floor/grass,/area/awaymission/snowfield/outside)
 "eo" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/wardrobe/red,/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)
-"ep" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/crate/medical,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/regular,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)
+"ep" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/crate/medical,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/regular,/obj/item/device/lighting/flare,/obj/item/device/lighting/flare,/obj/item/device/lighting/flare,/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)
 "eq" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)
 "er" = (/obj/effect/floor_decal/industrial/loading{icon_state = "loadingarea"; dir = 1},/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)
 "es" = (/obj/machinery/conveyor_switch{id = "away_soviet"},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/neutral,/area/awaymission/snowfield/outside)

@@ -15,7 +15,7 @@
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/eva
 	helm_type = /obj/item/clothing/head/helmet/space/rig/merc
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/gun,

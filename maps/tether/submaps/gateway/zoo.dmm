@@ -5153,7 +5153,7 @@
 /area/awaymission/zoo)
 "nO" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/lino,
 /area/awaymission/zoo)
 "nP" = (
@@ -6313,7 +6313,7 @@
 	},
 /obj/item/weapon/extinguisher,
 /obj/item/clothing/head/hardhat/red,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /turf/simulated/floor/plating,
 /area/awaymission/zoo)
 "qW" = (

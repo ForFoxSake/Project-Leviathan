@@ -260,7 +260,7 @@
 /area/submap/Boathouse)
 "aZ" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/carpet/bcarpet,
 /area/submap/Boathouse)
 "ba" = (

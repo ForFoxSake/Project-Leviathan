@@ -655,7 +655,7 @@
 /area/tether/surfacebase/medical/patient_a)
 "abt" = (
 /obj/structure/table/glass,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
@@ -2378,7 +2378,7 @@
 /area/tether/surfacebase/security/processing)
 "aes" = (
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1;
 	icon_state = "borderfloor";
@@ -2735,7 +2735,7 @@
 /area/rnd/xenobiology/xenoflora_storage)
 "aeV" = (
 /obj/structure/table/glass,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -15418,7 +15418,7 @@
 /area/library)
 "aAA" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -17853,7 +17853,7 @@
 	dir = 1
 	},
 /obj/item/weapon/tape_roll,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -17966,7 +17966,7 @@
 /area/library)
 "aEE" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -26351,7 +26351,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/lobby)
 "aTL" = (
@@ -29588,7 +29588,7 @@
 /obj/item/weapon/clipboard,
 /obj/item/weapon/stamp/hop,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = -10
 	},
 /obj/item/weapon/paper/dockingcodes,
@@ -30491,7 +30491,7 @@
 	pixel_y = 7
 	},
 /obj/item/weapon/folder/blue,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "bat" = (

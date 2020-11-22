@@ -236,7 +236,7 @@
 /area/awaymission/example)
 "aE" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /turf/simulated/floor,
 /area/awaymission/example)
 "aF" = (

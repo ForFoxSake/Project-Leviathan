@@ -4435,7 +4435,7 @@
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether_away/guttersite/commons)
 "kf" = (
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/mineral/floor/vacuum,
 /area/tether_away/guttersite/unexplored)
 "kg" = (
@@ -4507,7 +4507,7 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/structure/cable/cyan{
 	d1 = 4;
 	d2 = 8;
@@ -5255,7 +5255,7 @@
 /area/tether_away/guttersite/bridge)
 "mw" = (
 /obj/structure/table/darkglass,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
 "mx" = (

@@ -132,7 +132,7 @@
 /area/awaymission/listeningpost)
 "w" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor,
 /area/awaymission/listeningpost)
 "x" = (

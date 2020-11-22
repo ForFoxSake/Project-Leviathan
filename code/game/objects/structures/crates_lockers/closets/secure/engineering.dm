@@ -102,7 +102,7 @@
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/clothing/head/hardhat/red,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/extinguisher,
 		///obj/item/clamp,	//VOREStation Removal: without leaks those are pointless,
 		/obj/item/device/radio/headset/headset_eng,

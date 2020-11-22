@@ -6749,12 +6749,12 @@
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/crowbar,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
+/obj/item/device/lighting,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = 30
@@ -10513,7 +10513,7 @@
 /area/security/detectives_office)
 "asi" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -13150,7 +13150,7 @@
 "awM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "awN" = (
@@ -19375,9 +19375,9 @@
 "aHk" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/nifsofts_medical,
-/obj/item/device/flashlight/pen,
-/obj/item/device/flashlight/pen,
-/obj/item/device/flashlight/pen,
+/obj/item/device/lighting/pen,
+/obj/item/device/lighting/pen,
+/obj/item/device/lighting/pen,
 /obj/machinery/firealarm{
 	dir = 2;
 	layer = 3.3;
@@ -21534,7 +21534,7 @@
 "aKv" = (
 /obj/structure/closet/secure_closet/CMO,
 /obj/item/weapon/storage/belt/medical,
-/obj/item/device/flashlight/pen,
+/obj/item/device/lighting/pen,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/device/defib_kit/compact/combat/loaded,
@@ -25369,7 +25369,7 @@
 /area/tether/exploration)
 "aRq" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	dir = 2;
 	pixel_x = -4;
 	pixel_y = 12
@@ -32514,7 +32514,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hos)
 "vAP" = (
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/structure/table/steel,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4

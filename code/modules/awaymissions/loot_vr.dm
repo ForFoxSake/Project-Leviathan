@@ -300,14 +300,14 @@
 			var/num = rand(2,6)
 			for(var/i=0,i<num,i++)
 				var/spawn_type = pick(
-					/obj/item/device/flashlight/flare, \
+					/obj/item/device/lighting/flare, \
 					/obj/item/weapon/flame/candle, \
 					/obj/item/weapon/storage/box/matches, \
-					/obj/item/device/flashlight/glowstick, \
-					/obj/item/device/flashlight/glowstick/red, \
-					/obj/item/device/flashlight/glowstick/blue, \
-					/obj/item/device/flashlight/glowstick/orange, \
-					/obj/item/device/flashlight/glowstick/yellow)
+					/obj/item/device/lighting/glowstick, \
+					/obj/item/device/lighting/glowstick/red, \
+					/obj/item/device/lighting/glowstick/blue, \
+					/obj/item/device/lighting/glowstick/orange, \
+					/obj/item/device/lighting/glowstick/yellow)
 				new spawn_type(C)
 		if("engineering")
 			var/obj/structure/closet/crate/secure/gear/C = new(src.loc)

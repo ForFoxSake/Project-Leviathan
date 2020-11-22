@@ -435,7 +435,7 @@
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/device/flashlight/pen{
+/obj/item/device/lighting/pen{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -4425,7 +4425,7 @@
 /area/chapel/office)
 "ajX" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp{
+/obj/item/device/lighting/lamp{
 	pixel_x = 2;
 	pixel_y = 7
 	},
@@ -17394,7 +17394,7 @@
 /area/maintenance/lower/atmos)
 "aIk" = (
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
 "aIl" = (
@@ -17515,7 +17515,7 @@
 /area/tcommsat/computer)
 "aIx" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/computer)
 "aIy" = (
@@ -18615,7 +18615,7 @@
 /area/tether/surfacebase/medical/storage)
 "aKw" = (
 /obj/structure/table/rack,
-/obj/item/device/flashlight,
+/obj/item/device/lighting,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/structure/catwalk,
@@ -25771,7 +25771,7 @@
 /area/tether/surfacebase/security/interrogation)
 "aWb" = (
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/interrogation)
 "aWc" = (

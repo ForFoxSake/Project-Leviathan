@@ -195,12 +195,12 @@ datum/supply_drop_loot/riot
 		/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/crowbar,
-		/obj/item/device/flashlight,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
+		/obj/item/device/lighting,
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/suit/storage/hazardvest,
-		/obj/item/device/flashlight/flare,
-		/obj/item/device/flashlight/flare)
+		/obj/item/device/lighting/flare,
+		/obj/item/device/lighting/flare)
 
 /datum/supply_drop_loot/plushie
 	name = "Cuddly Fun!"

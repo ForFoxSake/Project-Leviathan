@@ -19,7 +19,7 @@
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	slowdown = 0.5
 	armor = list(melee = 30, bullet = 15, laser = 15,energy = 5, bomb = 20, bio = 100, rad = 50)
-	allowed = list(/obj/item/device/flashlight,
+	allowed = list(/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/storage/briefcase/inflatable,
@@ -52,7 +52,7 @@
 	min_pressure_protection = 0  * ONE_ATMOSPHERE
 	max_pressure_protection = 15 * ONE_ATMOSPHERE
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-	allowed = list(/obj/item/device/flashlight,
+	allowed = list(/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/device/t_scanner,
@@ -95,7 +95,7 @@
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	slowdown = 0.5
 	armor = list(melee = 30, bullet = 15, laser = 15, energy = 5, bomb = 25, bio = 100, rad = 75)
-	allowed = list(/obj/item/device/flashlight,
+	allowed = list(/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/storage/firstaid,
@@ -128,7 +128,7 @@
 	armor = list(melee = 40, bullet = 35, laser = 35, energy = 5, bomb = 40, bio = 100, rad = 50)
 	siemens_coefficient = 0.8
 	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
+			/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/melee,
@@ -164,7 +164,7 @@
 	armor = list(melee = 50, bullet = 45, laser = 45, energy = 10, bomb = 30, bio = 100, rad = 60)
 	siemens_coefficient = 0.7
 	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
+			/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/melee,
@@ -204,7 +204,7 @@
 	slowdown = 0.25
 	armor = list(melee = 25, bullet = 20, laser = 20, energy = 5, bomb = 20, bio = 100, rad = 50)
 	siemens_coefficient = 0.9
-	allowed = list(/obj/item/device/flashlight,
+	allowed = list(/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/storage/briefcase/inflatable,
@@ -235,7 +235,7 @@
 	slowdown = 0.5
 	armor = list(melee = 25, bullet = 10, laser = 10, energy = 50, bomb = 10, bio = 100, rad = 100)
 	siemens_coefficient = 0.8
-	allowed = list(/obj/item/device/flashlight,
+	allowed = list(/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/storage/firstaid,
@@ -277,7 +277,7 @@
 	armor = list(melee = 55, bullet = 45, laser = 45, energy = 25, bomb = 50, bio = 100, rad = 50)
 	siemens_coefficient = 0.6
 	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
+			/obj/item/device/lighting,
 			/obj/item/weapon/tank,
 			/obj/item/device/suit_cooling_unit,
 			/obj/item/weapon/melee,

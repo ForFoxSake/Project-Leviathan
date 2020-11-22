@@ -1405,9 +1405,9 @@
 	icon_state = "2-8"
 	},
 /obj/structure/table/standard,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
 /obj/machinery/cell_charger{
 	pixel_y = 13;
 	pixel_x = -3

@@ -76,7 +76,7 @@
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
 		/obj/item/stack/medical/bruise_pack,
-		/obj/item/device/flashlight/glowstick,
+		/obj/item/device/lighting/glowstick,
 		/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
 		/obj/item/clothing/mask/breath
 	)
@@ -266,7 +266,7 @@
 /obj/item/weapon/storage/box/flare
 	name = "box of flares"
 	desc = "A box containing 4 flares."
-	starts_with = list(/obj/item/device/flashlight/flare = 4)
+	starts_with = list(/obj/item/device/lighting/flare = 4)
 
 /obj/item/weapon/storage/box/trackimp
 	name = "boxed tracking implant kit"

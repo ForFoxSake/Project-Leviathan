@@ -1,6 +1,6 @@
 /******************************Lantern*******************************/
 
-/obj/item/device/flashlight/lantern
+/obj/item/device/lighting/lantern
 	name = "lantern"
 	icon_state = "lantern"
 	desc = "A mining lantern."

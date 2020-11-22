@@ -2347,7 +2347,7 @@
 /area/awaymission/arrivalblock)
 "fU" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/device/lighting/lamp/green{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -4147,7 +4147,7 @@
 /area/awaymission/southblock)
 "kD" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/southblock)
 "kE" = (

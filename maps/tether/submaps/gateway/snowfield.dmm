@@ -1478,9 +1478,9 @@
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/regular,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
+/obj/item/device/lighting/flare,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/base)
 "el" = (

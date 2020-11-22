@@ -875,7 +875,7 @@
 /area/awaymission/snow_outpost/dark)
 "dd" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/tiled,
 /area/awaymission/snow_outpost/powered)
 "de" = (
@@ -2175,7 +2175,7 @@
 /area/awaymission/snow_outpost/dark)
 "ho" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/item/weapon/reagent_containers/syringe/drugs,
 /turf/simulated/floor/carpet,
 /area/awaymission/snow_outpost/dark)
@@ -2294,7 +2294,7 @@
 /area/awaymission/snow_outpost/dark)
 "hK" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /turf/simulated/floor/carpet,
 /area/awaymission/snow_outpost/dark)
 "hL" = (

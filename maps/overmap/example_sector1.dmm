@@ -29,7 +29,7 @@
 "aC" = (/obj/structure/filingcabinet,/turf/simulated/floor,/area/tcommsat/computer)
 "aD" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; external_pressure_bound = 140; on = 1; pressure_checks = 0},/obj/machinery/camera{c_tag = "Main Computer Room"; dir = 2; network = list("Tcomsat")},/obj/structure/table/standard,/obj/item/weapon/folder/yellow,/obj/item/weapon/folder/yellow,/obj/machinery/light{dir = 1},/turf/simulated/floor,/area/tcommsat/computer)
 "aE" = (/obj/structure/table/standard,/obj/item/weapon/paper_bin,/obj/item/weapon/pen/blue{pixel_x = -3; pixel_y = 2},/turf/simulated/floor,/area/tcommsat/computer)
-"aF" = (/obj/structure/table/standard,/obj/item/device/flashlight/lamp,/turf/simulated/floor,/area/tcommsat/computer)
+"aF" = (/obj/structure/table/standard,/obj/item/device/lighting/lamp,/turf/simulated/floor,/area/tcommsat/computer)
 "aG" = (/obj/item/weapon/syntiflesh{name = "Cuban Pete-Meat"},/turf/simulated/floor/engine,/area/tcommsat/computer)
 "aH" = (/obj/item/device/radio/intercom{name = "Station Intercom (General)"; pixel_x = -29; pixel_y = 0},/turf/simulated/floor,/area/tcommsat/computer)
 "aI" = (/obj/structure/window/reinforced{dir = 4},/turf/space,/area/tcomsat)

@@ -467,7 +467,7 @@
 			/obj/item/device/camera_film = 2,
 			/obj/item/weapon/storage/photo_album,
 			/obj/item/device/reagent_scanner,
-			/obj/item/device/flashlight/maglight,
+			/obj/item/device/lighting/maglight,
 			/obj/item/weapon/storage/briefcase/crimekit,
 			/obj/item/weapon/storage/bag/detective
 			)
@@ -529,12 +529,12 @@
 			/obj/item/taperoll/police,
 			/obj/item/clothing/gloves/black,
 			/obj/item/device/hailer,
-			/obj/item/device/flashlight/flare,
+			/obj/item/device/lighting/flare,
 			/obj/item/clothing/accessory/storage/black_vest,
 			/obj/item/clothing/head/soft/sec/corp,
 			/obj/item/clothing/under/rank/security/corp,
 			/obj/item/weapon/gun/energy/taser,
-			/obj/item/device/flashlight/maglight
+			/obj/item/device/lighting/maglight
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -563,7 +563,7 @@
 			/obj/item/weapon/melee/baton/loaded,
 			/obj/item/weapon/storage/box/holobadge,
 			/obj/item/clothing/head/beret/sec/corporate/warden,
-			/obj/item/device/flashlight/maglight
+			/obj/item/device/lighting/maglight
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -590,7 +590,7 @@
 			/obj/item/weapon/melee/telebaton,
 			/obj/item/weapon/shield/riot/tele,
 			/obj/item/clothing/head/beret/sec/corporate/hos,
-			/obj/item/device/flashlight/maglight
+			/obj/item/device/lighting/maglight
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanotrasen

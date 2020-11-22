@@ -256,7 +256,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
 				/obj/item/weapon/tank/emergency/oxygen,
-				/obj/item/device/flashlight,
+				/obj/item/device/lighting,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
 				/obj/item/ammo_magazine,
@@ -326,7 +326,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
 				/obj/item/weapon/tank/emergency/oxygen,
-				/obj/item/device/flashlight,
+				/obj/item/device/lighting,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
 				/obj/item/ammo_magazine,
@@ -501,7 +501,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	permeability_coefficient = 0.50
 	allowed = list(
-		/obj/item/device/flashlight, /obj/item/device/analyzer,
+		/obj/item/device/lighting, /obj/item/device/analyzer,
 		/obj/item/device/radio, /obj/item/weapon/tank/emergency/oxygen,
 		/obj/item/weapon/reagent_containers/hypospray, /obj/item/device/healthanalyzer,
 		/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,

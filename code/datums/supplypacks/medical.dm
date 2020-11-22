@@ -129,7 +129,7 @@
 			/obj/item/weapon/cartridge/cmo,
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/device/healthanalyzer,
-			/obj/item/device/flashlight/pen,
+			/obj/item/device/lighting/pen,
 			/obj/item/weapon/reagent_containers/syringe
 			)
 	cost = 50
@@ -152,7 +152,7 @@
 			/obj/item/weapon/cartridge/medical,
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/device/healthanalyzer,
-			/obj/item/device/flashlight/pen,
+			/obj/item/device/lighting/pen,
 			/obj/item/weapon/reagent_containers/syringe
 			)
 	cost = 20
@@ -202,7 +202,7 @@
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/device/healthanalyzer,
 			/obj/item/weapon/cartridge/medical,
-			/obj/item/device/flashlight/pen,
+			/obj/item/device/lighting/pen,
 			/obj/item/weapon/reagent_containers/syringe,
 			/obj/item/clothing/accessory/storage/white_vest
 			)

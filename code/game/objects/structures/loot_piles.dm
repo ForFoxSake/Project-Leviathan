@@ -131,13 +131,13 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_states_to_use = list("junk_pile1", "junk_pile2", "junk_pile3", "junk_pile4", "junk_pile5")
 
 	common_loot = list(
-		/obj/item/device/flashlight/flare,
-		/obj/item/device/flashlight/glowstick,
-		/obj/item/device/flashlight/glowstick/blue,
-		/obj/item/device/flashlight/glowstick/orange,
-		/obj/item/device/flashlight/glowstick/red,
-		/obj/item/device/flashlight/glowstick/yellow,
-		/obj/item/device/flashlight/pen,
+		/obj/item/device/lighting/flare,
+		/obj/item/device/lighting/glowstick,
+		/obj/item/device/lighting/glowstick/blue,
+		/obj/item/device/lighting/glowstick/orange,
+		/obj/item/device/lighting/glowstick/red,
+		/obj/item/device/lighting/glowstick/yellow,
+		/obj/item/device/lighting/pen,
 		/obj/item/weapon/cell,
 		/obj/item/weapon/cell/device,
 		/obj/item/clothing/mask/gas,

@@ -14,7 +14,7 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/combat
 	allowed = list(
 		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/melee/baton,
@@ -50,7 +50,7 @@
 	offline_slowdown = 3
 	offline_vision_restriction = 1
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,

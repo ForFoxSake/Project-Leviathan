@@ -98,7 +98,7 @@
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "aw" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "ax" = (
@@ -163,7 +163,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/template_noop)
 "aH" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/tiled/freezer,
 /area/template_noop)
 "aI" = (
@@ -202,7 +202,7 @@
 /area/template_noop)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/carpet/turcarpet,
 /area/template_noop)
 "aP" = (
@@ -237,7 +237,7 @@
 /turf/simulated/floor/wood,
 /area/template_noop)
 "aV" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/wood,
 /area/template_noop)
 "aW" = (
@@ -262,7 +262,7 @@
 "ba" = (
 /obj/structure/table/woodentable,
 /obj/random/action_figure,
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/template_noop)
 "bb" = (

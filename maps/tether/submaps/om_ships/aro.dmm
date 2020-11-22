@@ -2482,7 +2482,7 @@
 /turf/simulated/floor/wood,
 /area/ship/aro/midshipshangars)
 "eX" = (
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/structure/table/alien/blue,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm/alarms_hidden{
@@ -2769,7 +2769,7 @@
 /turf/simulated/floor/wood,
 /area/ship/aro/midshipshangars)
 "fA" = (
-/obj/item/device/flashlight/lamp,
+/obj/item/device/lighting/lamp,
 /obj/structure/table/alien/blue,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";

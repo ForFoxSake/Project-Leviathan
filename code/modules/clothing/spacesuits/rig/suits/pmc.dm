@@ -13,7 +13,7 @@
 
 	armor = list(melee = 60, bullet = 50, laser = 35,energy = 15, bomb = 30, bio = 100, rad = 95)
 	allowed = list(
-		/obj/item/device/flashlight,
+		/obj/item/device/lighting,
 		/obj/item/weapon/tank,
 		/obj/item/device/t_scanner,
 		/obj/item/weapon/rcd,

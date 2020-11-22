@@ -2355,7 +2355,7 @@
 /area/awaymission/spacebattle/cruiser)
 "gQ" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/lighting/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/spacebattle/cruiser)
 "gR" = (

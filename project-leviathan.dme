@@ -1109,7 +1109,7 @@
 #include "code\game\objects\items\devices\defib.dm"
 #include "code\game\objects\items\devices\flash.dm"
 #include "code\game\objects\items\devices\flash_vr.dm"
-#include "code\game\objects\items\devices\flashlight.dm"
+#include "code\game\objects\items\devices\lighting.dm"
 #include "code\game\objects\items\devices\floor_painter.dm"
 #include "code\game\objects\items\devices\geiger.dm"
 #include "code\game\objects\items\devices\gps.dm"

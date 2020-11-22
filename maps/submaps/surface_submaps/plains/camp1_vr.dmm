@@ -17,7 +17,7 @@
 	},
 /area/submap/camp1)
 "e" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/device/lighting/lantern,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
