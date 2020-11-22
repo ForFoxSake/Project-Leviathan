@@ -15,6 +15,7 @@
 	var/projectile_type					//The bullet type to create when New() is called
 	var/obj/item/projectile/BB = null	//The loaded bullet - make it so that the projectiles are created only when needed?
 	var/caseless = null					//Caseless ammo deletes its self once the projectile is fired.
+	var/max_held = 0
 
 /obj/item/ammo_casing/New()
 	..()
@@ -47,16 +48,20 @@
 			BB.name = "[initial(BB.name)] (\"[label_text]\")"
 	else if(istype(I, /obj/item/ammo_magazine) && isturf(loc)) // Mass magazine reloading.
 		var/obj/item/ammo_magazine/box = I
-		if (!box.can_remove_ammo || box.reloading)
+		if(!box.can_remove_ammo || box.reloading)
 			return ..()
 
 		box.reloading = TRUE
+		var/loaded_only = TRUE
 		var/boolets = 0
 		var/turf/floor = loc
+		if(istype(box, /obj/item/ammo_magazine/handful))
+			var/obj/item/ammo_magazine/handful/handful = box
+			loaded_only = handful.loaded_only
 		for(var/obj/item/ammo_casing/bullet in floor)
 			if(box.stored_ammo.len >= box.max_ammo)
 				break
-			if(box.caliber == bullet.caliber && bullet.BB)
+			if(box.caliber == bullet.caliber && ((loaded_only && bullet.BB) || (!loaded_only && !bullet.BB)))
 				if (boolets < 1)
 					to_chat(user, "<span class='notice'>You start collecting shells.</span>") // Say it here so it doesn't get said if we don't find anything useful.
 				if(do_after(usr,5,box))
@@ -76,13 +81,32 @@
 		else
 			to_chat(user, "<span class='warning'>You fail to collect anything!</span>")
 		box.reloading = FALSE
-	else if (istype(I, /obj/item/ammo_disk))
+	else if(istype(I, /obj/item/ammo_disk))
 		var/obj/item/ammo_disk/disk = I
 		if (disk.debug)
 			src.forceMove(disk)
 			disk.blueprint = src
 			disk.debug = FALSE
 			disk.update_name()
+	else if(istype(I, /obj/item/ammo_casing))
+		var/obj/item/ammo_casing/bullet = I
+		if(bullet.caliber == caliber)
+			if((bullet.BB && BB) || (!bullet.BB && !BB))
+				if(max_held > 1)
+					user.drop_from_inventory(bullet)
+					user.drop_from_inventory(src)
+					var/obj/item/ammo_magazine/handful/mag = new(user, bullet, src)
+					user.put_in_hands(mag)
+					return
+				else
+					to_chat(user, "<span class='warning'>You'd have a hard time holding more than one of these.</span>")
+					return
+			else
+				to_chat(user, "<span class='warning'>Mixing spent and live rounds is probably a bad idea.</span>")
+				return
+		else
+			to_chat(user, "<span class='warning'>Mixing ammo calibers is probably a bad idea.</span>")
+			return
 	else
 		return ..()
 
@@ -171,8 +195,8 @@
 		C.forceMove(src)
 		stored_ammo.Add(C)
 		update_icon()
-	if(istype(W, /obj/item/ammo_magazine/clip))
-		var/obj/item/ammo_magazine/clip/L = W
+	if(istype(W, /obj/item/ammo_magazine/clip) || istype(W, /obj/item/ammo_magazine/handful))
+		var/obj/item/ammo_magazine/L = W
 		if(L.caliber != caliber)
 			to_chat(user, "<span class='warning'>The ammo in [L] does not fit into [src].</span>")
 			return
@@ -187,6 +211,7 @@
 		AC.forceMove(src)
 		stored_ammo.Insert(1, AC) //add it to the head of our magazine's list
 		L.update_icon()
+		user.setClickCooldown(1) // Prevent loading the entire magazine all at once. Should be barely noticable.
 	playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 	update_icon()
 
@@ -263,4 +288,3 @@
 
 	magazine_icondata_keys["[M.type]"] = icon_keys
 	magazine_icondata_states["[M.type]"] = ammo_states
-

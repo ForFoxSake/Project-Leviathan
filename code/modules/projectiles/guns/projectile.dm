@@ -82,22 +82,23 @@
 				var/obj/item/clothing/G = H.gloves
 				G.gunshot_residue = chambered.caliber
 
-	switch(handle_casings)
-		if(EJECT_CASINGS) //eject casing onto ground.
-			if(chambered.caseless)
-				qdel(chambered)
-				return
-			else
+	if(chambered.caseless) // If we're using caseless ammo, don't even bother handling the casings.
+		qdel(chambered)
+		chambered = null
+		return
+	else
+		switch(handle_casings)
+			if(EJECT_CASINGS) //eject casing onto ground.
 				chambered.loc = get_turf(src)
 				playsound(src, "casing", 50, 1)
-		if(CYCLE_CASINGS) //cycle the casing back to the end.
-			if(ammo_magazine)
-				ammo_magazine.stored_ammo += chambered
-			else
-				loaded += chambered
+			if(CYCLE_CASINGS) //cycle the casing back to the end.
+				if(ammo_magazine)
+					ammo_magazine.stored_ammo += chambered
+				else
+					loaded += chambered
 
-	if(handle_casings != HOLD_CASINGS)
-		chambered = null
+		if(handle_casings != HOLD_CASINGS)
+			chambered = null
 
 
 //Attempts to load A into src, depending on the type of thing being loaded and the load_method

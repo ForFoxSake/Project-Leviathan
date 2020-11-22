@@ -28,6 +28,7 @@
 	caliber = ".357"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	matter = list(DEFAULT_WALL_MATERIAL = 210)
+	max_held = 8
 
 /*
  * .38
@@ -38,6 +39,7 @@
 	caliber = ".38"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
+	max_held = 8
 
 /obj/item/ammo_casing/a38/rubber
 	desc = "A .38 rubber bullet casing."
@@ -60,6 +62,7 @@
 	caliber = ".44"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	matter = list(DEFAULT_WALL_MATERIAL = 210)
+	max_held = 6
 
 /obj/item/ammo_casing/a44/rubber
 	icon_state = "r-casing"
@@ -81,6 +84,7 @@
 	caliber = ".75"
 	projectile_type = /obj/item/projectile/bullet/gyro
 	matter = list(DEFAULT_WALL_MATERIAL = 4000)
+	max_held = 4
 
 /*
  * 9mm
@@ -91,6 +95,7 @@
 	caliber = "9mm"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
+	max_held = 10
 
 /obj/item/ammo_casing/a9mm/ap
 	desc = "A 9mm armor-piercing bullet casing."
@@ -126,6 +131,7 @@
 	caliber = ".45"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	matter = list(DEFAULT_WALL_MATERIAL = 75)
+	max_held = 10
 
 /obj/item/ammo_casing/a45/ap
 	desc = "A .45 Armor-Piercing bullet casing."
@@ -170,6 +176,7 @@
 	caliber = "10mm"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	matter = list(DEFAULT_WALL_MATERIAL = 75)
+	max_held = 10
 
 /obj/item/ammo_casing/a10mm/emp
 	name = "10mm haywire round"
@@ -189,6 +196,7 @@
 	caliber = "12g"
 	projectile_type = /obj/item/projectile/bullet/shotgun
 	matter = list(DEFAULT_WALL_MATERIAL = 360)
+	max_held = 4
 
 /obj/item/ammo_casing/a12g/pellet
 	name = "shotgun shell"
@@ -256,6 +264,7 @@
 	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	matter = list(DEFAULT_WALL_MATERIAL = 200)
+	max_held = 6
 
 /obj/item/ammo_casing/a762/ap
 	desc = "A 7.62mm armor-piercing bullet casing."
@@ -291,6 +300,7 @@
 	caliber = "14.5mm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	matter = list(DEFAULT_WALL_MATERIAL = 1250)
+	max_held = 4
 
 /obj/item/ammo_casing/a145/highvel
 	desc = "A 14.5mm sabot shell."
@@ -310,6 +320,7 @@
 	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	matter = list(DEFAULT_WALL_MATERIAL = 180)
+	max_held = 6
 
 /obj/item/ammo_casing/a545/ap
 	desc = "A 5.45mm armor-piercing bullet casing."
@@ -346,6 +357,7 @@
 	projectile_type = /obj/item/projectile/bullet/pistol // Close enough to be comparable.
 	matter = list(DEFAULT_WALL_MATERIAL = 180)
 	caseless = 1
+	max_held = 8
 
 /obj/item/ammo_casing/a5mmcaseless/stun
 	desc = "A 5mm solid phoron caseless stun round."
@@ -371,6 +383,7 @@
 	color = "#FF0000"
 	projectile_type = /obj/item/projectile/bullet/pistol/cap
 	matter = list(DEFAULT_WALL_MATERIAL = 85)
+	max_held = 24
 
 /obj/item/ammo_casing/spent // For simple hostile mobs only, so they don't cough up usable bullets when firing. This is for literally nothing else.
 	icon_state = "s-casing-spent"

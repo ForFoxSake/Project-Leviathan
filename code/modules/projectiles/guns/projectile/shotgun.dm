@@ -33,7 +33,10 @@
 	playsound(src, action_sound, 60, 1)
 
 	if(chambered)//We have a shell in the chamber
-		chambered.loc = get_turf(src)//Eject casing
+		if(chambered.caseless) // Caseless shotguns, why not?
+			qdel(chambered)
+		else
+			chambered.loc = get_turf(src)//Eject casing
 		chambered = null
 
 	if(loaded.len)

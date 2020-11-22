@@ -124,80 +124,80 @@
 	desc = "It has a picture of a gun and several warning symbols on the front."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/blank = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/blank = 4)
 
 /obj/item/weapon/storage/box/blanks/large
-	starts_with = list(/obj/item/ammo_casing/a12g/blank = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/blank = 8)
 
 /obj/item/weapon/storage/box/beanbags
 	name = "box of beanbag shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "beanshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/beanbag = 4)
 
 /obj/item/weapon/storage/box/beanbags/large/New()
-	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/beanbag = 8)
 
 /obj/item/weapon/storage/box/shotgunammo
 	name = "box of shotgun slugs"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "lethalshellshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells = 4)
 
 /obj/item/weapon/storage/box/shotgunammo/large
-	starts_with = list(/obj/item/ammo_casing/a12g = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells = 8)
 
 /obj/item/weapon/storage/box/shotgunshells
 	name = "box of shotgun shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "lethalslug_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/pellet = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/pellet = 4)
 
 /obj/item/weapon/storage/box/shotgunshells/large
-	starts_with = list(/obj/item/ammo_casing/a12g/pellet = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/pellet = 8)
 
 /obj/item/weapon/storage/box/flashshells
 	name = "box of illumination shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "illumshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/flash = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/flash = 4)
 
 /obj/item/weapon/storage/box/flashshells/large
-	starts_with = list(/obj/item/ammo_casing/a12g/flash = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/flash = 8)
 
 /obj/item/weapon/storage/box/stunshells
 	name = "box of stun shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "stunshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/stunshell = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/stunshell = 4)
 
 /obj/item/weapon/storage/box/stunshells/large
-	starts_with = list(/obj/item/ammo_casing/a12g/stunshell = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/stunshell = 8)
 
 /obj/item/weapon/storage/box/practiceshells
 	name = "box of practice shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/practice = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/practice = 4)
 
 /obj/item/weapon/storage/box/practiceshells/large
-	starts_with = list(/obj/item/ammo_casing/a12g/practice = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/practice = 8)
 
 /obj/item/weapon/storage/box/empshells
 	name = "box of emp shells"
 	desc = "It has a picture of a gun and several warning symbols on the front."
 	icon_state = "empshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
-	starts_with = list(/obj/item/ammo_casing/a12g/emp = 8)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/emp = 4)
 
 /obj/item/weapon/storage/box/empshells/large
-	starts_with = list(/obj/item/ammo_casing/a12g/emp = 16)
+	starts_with = list(/obj/item/ammo_magazine/handful/shells/emp = 8)
 
 /obj/item/weapon/storage/box/sniperammo
 	name = "box of 14.5mm shells"

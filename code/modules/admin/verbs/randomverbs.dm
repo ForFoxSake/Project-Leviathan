@@ -731,11 +731,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if (istype(mob, /mob/observer/dead)) // so they don't spam gibs everywhere
 			return
 		else
+			log_admin("[key_name(usr)] used gibself.")
+			message_admins("<font color='blue'>[key_name_admin(usr)] used gibself.</font>", 1)
+			feedback_add_details("admin_verb","GIBS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			mob.gib()
-
-		log_admin("[key_name(usr)] used gibself.")
-		message_admins("<font color='blue'>[key_name_admin(usr)] used gibself.</font>", 1)
-		feedback_add_details("admin_verb","GIBS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /*
 /client/proc/cmd_manual_ban()
 	set name = "Manual Ban"

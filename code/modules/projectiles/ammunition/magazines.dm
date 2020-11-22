@@ -706,3 +706,96 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 600)
 	max_ammo = 7
 	multiple_sprites = 1
+
+///////// Magical mystical non-magazine, that stores roughly one handful of bullets. /////////
+
+/obj/item/ammo_magazine/handful
+	name = "handful of"
+	desc = "A collection of bullets. Enough to fit in the palm of your hand."
+	icon = 'icons/obj/ammo_vr.dmi'
+	icon_state = ""
+	slot_flags = 0
+	initial_ammo = 0
+	max_ammo = 0
+	var/loaded_only = TRUE
+
+/obj/item/ammo_magazine/handful/New(loc, var/ammo_one, var/ammo_two)
+	if(ammo_one && ammo_two)
+		var/obj/item/ammo_casing/casing_a = ammo_one
+		var/obj/item/ammo_casing/casing_b = ammo_two
+		name = "[initial(name)] [casing_a.caliber] [casing_a.name]s"
+		caliber = casing_a.caliber
+		ammo_type = casing_a.type
+		max_ammo = casing_a.max_held
+		w_class = casing_a.w_class
+		if(!casing_a.BB)
+			loaded_only = FALSE
+		casing_a.forceMove(src)
+		casing_b.forceMove(src)
+		stored_ammo.Add(casing_a)
+		stored_ammo.Add(casing_b)
+		drop_sound = casing_a.drop_sound
+		. = ..()
+	else
+		. = ..()
+		if(stored_ammo && stored_ammo.len)
+			var/obj/item/ammo_casing/casing = stored_ammo[1]
+			w_class = casing.w_class
+			drop_sound = casing.drop_sound
+			name = "[initial(name)] [caliber] [casing.name]s"
+	return .
+
+/obj/item/ammo_magazine/handful/update_icon()
+	overlays.Cut()
+	if(!stored_ammo || !stored_ammo.len) // Huge hack, but only way I can guarentee it'll be deleted properly.
+		qdel(src)
+	else
+		var/case_count = 1
+		for(var/obj/item/ammo_casing/C in stored_ammo)
+			var/image/case_image = image(icon = C.icon, icon_state = C.icon_state, dir = C.dir)
+			var/coef = round(14 * case_count/max_ammo)
+			case_image.pixel_x = rand(coef, -coef)
+			case_image.pixel_y = rand(coef, -coef)
+			var/matrix/case_image_matrix = matrix()
+			case_image_matrix.Turn(round(45 * rand(0, 16) / 2))
+			case_image.transform = case_image_matrix
+			overlays += case_image
+			case_count += 1
+
+/obj/item/ammo_magazine/handful/attack_self(mob/user)
+	playsound(src, "casing_sound", 50, 1)
+	for(var/obj/item/ammo_casing/C in stored_ammo)
+		C.forceMove(user.loc)
+		C.set_dir(pick(cardinal))
+	stored_ammo.Cut()
+	to_chat(user, "<span class='notice'>You drop the rounds you were holding.</span>")
+	user.drop_from_inventory(src)
+	qdel(src)
+	return
+
+/obj/item/ammo_magazine/handful/shells
+	ammo_type = /obj/item/ammo_casing/a12g
+	caliber = "12g"
+	initial_ammo = 4
+	max_ammo = 4
+
+/obj/item/ammo_magazine/handful/shells/pellet
+	ammo_type = /obj/item/ammo_casing/a12g/pellet
+
+/obj/item/ammo_magazine/handful/shells/blank
+	ammo_type = /obj/item/ammo_casing/a12g/blank
+
+/obj/item/ammo_magazine/handful/shells/beanbag
+	ammo_type = /obj/item/ammo_casing/a12g/beanbag
+
+/obj/item/ammo_magazine/handful/shells/flash
+	ammo_type = /obj/item/ammo_casing/a12g/flash
+
+/obj/item/ammo_magazine/handful/shells/stunshell
+	ammo_type = /obj/item/ammo_casing/a12g/stunshell
+
+/obj/item/ammo_magazine/handful/shells/emp
+	ammo_type = /obj/item/ammo_casing/a12g/emp
+
+/obj/item/ammo_magazine/handful/shells/practice
+	ammo_type = /obj/item/ammo_casing/a12g/practice

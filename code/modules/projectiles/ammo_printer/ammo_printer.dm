@@ -159,6 +159,18 @@
 	if(is_robot_module(O))
 		return 0
 
+	if(istype(O, /obj/item/ammo_magazine/handful))
+		var/obj/item/ammo_magazine/handful/mag = O
+		for(var/obj/item/ammo_casing/round in mag.stored_ammo)
+			round.forceMove(loc)
+			eat(round, user)
+		mag.stored_ammo.Cut()
+		user.remove_from_mob(mag)
+		qdel(mag)
+		to_chat(user, "You feed \the [mag] into \the [src]!")
+		updateUsrDialog()
+		return 0
+
 	if(istype(O, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/mag = O
 		if(!magazine && mag && mag.max_ammo > mag.stored_ammo.len)
@@ -166,7 +178,6 @@
 			attempt_magazine_insert(mag)
 		else
 			to_chat(user, "\The [src] rejects \the [mag]!")
-		return 0
 
 	if(istype(O,/obj/item/ammo_disk))
 		var/obj/item/ammo_disk/disk = O
@@ -178,7 +189,6 @@
 			to_chat(user, "You insert \the [disk] into \the [src]!")
 		else
 			to_chat(user, "\The [src] rejects \the [disk]!")
-		return 0
 
 	if(istype(O,/obj/item/stack) || istype(O,/obj/item/ammo_casing))
 		eat(O, user)
@@ -259,7 +269,7 @@
 	add_fingerprint(usr)
 
 	if(busy)
-		to_chat(usr, "<span class='notice'>The autolathe is busy. Please wait for completion of previous operation.</span>")
+		to_chat(usr, "<span class='notice'>The ammolathe is busy. Please wait for completion of previous operation.</span>")
 		return
 
 	else if(href_list["setfilter"])
