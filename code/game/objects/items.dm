@@ -275,9 +275,6 @@
 /obj/item/proc/talk_into(mob/M as mob, text)
 	return
 
-/obj/item/proc/moved(mob/user as mob, old_loc as turf)
-	return
-
 /obj/item/throw_impact(atom/hit_atom)
 	..()
 	if(drop_sound)

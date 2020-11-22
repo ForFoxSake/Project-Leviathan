@@ -398,14 +398,12 @@
 /obj/item/device/lighting/glowstick/process()
 	fuel = max(fuel - 1, 0)
 	if(!fuel || !on)
-		turn_off()
+		on = 0
+		update_icon()
 		if(!fuel)
 			src.icon_state = "[initial(icon_state)]-empty"
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/device/lighting/glowstick/proc/turn_off()
-	on = 0
-	update_icon()
 
 /obj/item/device/lighting/glowstick/attack_self(mob/user)
 
