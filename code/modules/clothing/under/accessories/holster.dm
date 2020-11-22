@@ -3,6 +3,7 @@
 	desc = "A handgun holster."
 	icon_state = "holster"
 	slot = ACCESSORY_SLOT_WEAPON
+	slot_flags = SLOT_TIE | SLOT_POCKET
 	concealed_holster = 1
 	var/obj/item/holstered = null
 	var/list/can_hold //VOREStation Add
@@ -78,10 +79,11 @@
 		clear_holster()
 
 /obj/item/clothing/accessory/holster/attack_hand(mob/user as mob)
-	if (has_suit && (slot & ACCESSORY_SLOT_UTILITY))	//if we are part of a suit
-		if (holstered)
+	if(holstered)
+		// If we're in the off hand, or on a suit or pocket as a utility slot.
+		if (((has_suit || user.isEquipped(src)) && (slot & ACCESSORY_SLOT_UTILITY)) || src == user.get_inactive_hand())
 			unholster(user)
-		return
+			return
 
 	..(user)
 
@@ -89,7 +91,7 @@
 	holster(W, user)
 
 /obj/item/clothing/accessory/holster/emp_act(severity)
-	if (holstered)
+	if(holstered)
 		holstered.emp_act(severity)
 	..()
 
@@ -109,6 +111,16 @@
 	if(has_suit)
 		has_suit.verbs -= /obj/item/clothing/accessory/holster/verb/holster_verb
 	..()
+
+/obj/item/clothing/accessory/holster/attack_self(mob/user)
+	if(src == user.get_active_hand()) // Probably redundant but make sure we've not been attached to the suit slot.
+		if(CHECK_BITFIELD(slot, ACCESSORY_SLOT_UTILITY))
+			DISABLE_BITFIELD(slot, ACCESSORY_SLOT_UTILITY)
+			to_chat(user, "<span class='notice'>You lock the quick draw mechanism.</span>")
+		else
+			ENABLE_BITFIELD(slot, ACCESSORY_SLOT_UTILITY)
+			to_chat(user, "<span class='notice'>You unlock the quick draw mechanism.</span>")
+	return
 
 //For the holster hotkey
 /obj/item/clothing/accessory/holster/verb/holster_verb()

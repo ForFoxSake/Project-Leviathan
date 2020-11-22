@@ -283,7 +283,9 @@
 	name = "machete sheath"
 	desc = "A handsome synthetic leather sheath with matching belt."
 	icon_state = "holster_machete"
+	item_state = "machete"
 	slot = ACCESSORY_SLOT_WEAPON
+	slot_flags = SLOT_TIE | SLOT_BELT | SLOT_DENYPOCKET
 	concealed_holster = 0
 	can_hold = list(/obj/item/weapon/material/knife/machete)
 	//sound_in = 'sound/effects/holster/sheathin.ogg'
