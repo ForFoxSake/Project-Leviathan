@@ -1535,12 +1535,12 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/device/lighting/maglight,
-/obj/item/device/lighting/maglight,
-/obj/item/device/lighting/maglight,
-/obj/item/device/lighting/maglight,
-/obj/item/device/lighting/maglight,
-/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/flashlight/maglight,
+/obj/item/device/lighting/flashlight/maglight,
+/obj/item/device/lighting/flashlight/maglight,
+/obj/item/device/lighting/flashlight/maglight,
+/obj/item/device/lighting/flashlight/maglight,
+/obj/item/device/lighting/flashlight/maglight,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "dark"

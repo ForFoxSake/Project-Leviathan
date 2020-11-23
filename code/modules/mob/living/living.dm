@@ -857,6 +857,11 @@ default behaviour is:
 	else if(!isspace(loc))
 		inertia_dir = 0
 		make_floating(0)
+	
+	// Bad place to put it, but it works.
+	// Gotta update all our flashlights to move with us.
+	for(var/obj/item/device/lighting/flashlight/F in src)
+		F.set_dir(dir)
 
 /mob/living/proc/inertial_drift()
 	if(x > 1 && x < (world.maxx) && y > 1 && y < (world.maxy))

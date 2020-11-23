@@ -104,7 +104,7 @@
 	shoes = /obj/item/clothing/shoes/boots/jackboots
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/toy/crossbow
-	r_pocket = /obj/item/device/lighting/color/red
+	r_pocket = /obj/item/device/lighting/flashlight/color/red
 
 /decl/hierarchy/outfit/costume/pirate
 	name = OUTFIT_COSTUME("Pirate")

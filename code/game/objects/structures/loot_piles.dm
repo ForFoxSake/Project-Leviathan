@@ -137,7 +137,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/device/lighting/glowstick/orange,
 		/obj/item/device/lighting/glowstick/red,
 		/obj/item/device/lighting/glowstick/yellow,
-		/obj/item/device/lighting/pen,
+		/obj/item/device/lighting/flashlight/pen,
 		/obj/item/weapon/cell,
 		/obj/item/weapon/cell/device,
 		/obj/item/clothing/mask/gas,

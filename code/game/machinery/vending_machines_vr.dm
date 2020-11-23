@@ -871,7 +871,7 @@
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
 					/obj/item/device/pda = 10,
 					/obj/item/device/radio/headset = 10,
-					/obj/item/device/lighting = 5,
+					/obj/item/device/lighting/flashlight = 5,
 					/obj/item/device/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10)
 	prices = list(/obj/item/clothing/suit/circuitry = 100,
@@ -891,7 +891,7 @@
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 1000,
 					/obj/item/device/pda = 50,
 					/obj/item/device/radio/headset = 50,
-					/obj/item/device/lighting = 100,
+					/obj/item/device/lighting/flashlight = 100,
 					/obj/item/device/laser_pointer = 200,
 					/obj/item/clothing/glasses/omnihud = 100)
 	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)

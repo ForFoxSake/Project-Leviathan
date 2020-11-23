@@ -106,7 +106,7 @@
 		/obj/item/device/radio/headset/headset_med/alt,
 		/obj/item/weapon/cartridge/medical,
 		/obj/item/weapon/storage/briefcase/inflatable,
-		/obj/item/device/lighting,
+		/obj/item/device/lighting/flashlight,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/clothing/glasses/hud/health,
 		/obj/item/device/healthanalyzer,

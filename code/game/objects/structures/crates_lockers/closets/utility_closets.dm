@@ -75,7 +75,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/lighting,
+		/obj/item/device/lighting/flashlight,
 		/obj/item/weapon/tank/oxygen/red,
 		/obj/item/weapon/extinguisher,
 		/obj/item/clothing/head/hardhat/red)
@@ -84,7 +84,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire/firefighter = 2,
 		/obj/item/clothing/mask/gas = 2,
-		/obj/item/device/lighting = 2,
+		/obj/item/device/lighting/flashlight = 2,
 		/obj/item/weapon/tank/oxygen/red = 2,
 		/obj/item/weapon/extinguisher = 2,
 		/obj/item/clothing/head/hardhat/red = 2)
@@ -102,7 +102,7 @@
 	if(prob(40))
 		starts_with += /obj/item/clothing/suit/storage/hazardvest
 	if(prob(70))
-		starts_with += /obj/item/device/lighting
+		starts_with += /obj/item/device/lighting/flashlight
 	if(prob(70))
 		starts_with += /obj/item/weapon/tool/screwdriver
 	if(prob(70))
@@ -195,7 +195,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/lighting,
+		/obj/item/device/lighting/flashlight,
 		/obj/item/weapon/tank/oxygen/red,
 		/obj/item/weapon/extinguisher,
 		/obj/item/clothing/head/hardhat/red)

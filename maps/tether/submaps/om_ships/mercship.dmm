@@ -421,7 +421,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/flashlight/maglight,
 /obj/item/weapon/storage/belt/security/tactical,
 /obj/item/weapon/storage/backpack/dufflebag/syndie,
 /obj/item/weapon/gun/projectile/silenced,
@@ -838,7 +838,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/flashlight/maglight,
 /obj/item/weapon/storage/belt/security/tactical,
 /obj/item/weapon/storage/backpack/dufflebag/syndie,
 /obj/item/weapon/gun/projectile/silenced,
@@ -937,7 +937,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/flashlight/maglight,
 /obj/item/weapon/storage/belt/security/tactical,
 /obj/item/weapon/storage/backpack/dufflebag/syndie,
 /obj/item/weapon/gun/projectile/silenced,

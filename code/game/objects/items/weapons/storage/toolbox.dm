@@ -28,7 +28,7 @@
 	)
 /obj/item/weapon/storage/toolbox/emergency/Initialize()
 	if(prob(50))
-		new /obj/item/device/lighting(src)
+		new /obj/item/device/lighting/flashlight(src)
 	else
 		new /obj/item/device/lighting/flare(src)
 	. = ..()

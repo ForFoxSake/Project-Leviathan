@@ -17,6 +17,8 @@
 	var/brightness_level = "medium"
 	var/power_usage
 	var/power_use = 1
+	var/radius_multiplier = 1
+	var/brightness_multiplier = 1
 
 /obj/item/device/lighting/Initialize()
 	. = ..()
@@ -49,6 +51,15 @@
 	if(choice)
 		brightness_level = choice
 		power_usage = brightness_levels[choice]
+		if(brightness_level == "low")
+			radius_multiplier = 0.5
+			brightness_multiplier = 0.75
+		else if(brightness_level == "high")
+			radius_multiplier = 1.5
+			brightness_multiplier = 1.1
+		else
+			radius_multiplier = 1
+			brightness_multiplier = 1
 		to_chat(user, "<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>")
 		update_icon()
 
@@ -68,13 +79,7 @@
 /obj/item/device/lighting/update_icon()
 	if(on)
 		icon_state = "[initial(icon_state)]-on"
-
-		if(brightness_level == "low")
-			set_light(brightness_on/2, flashlight_power*0.75, flashlight_colour)
-		else if(brightness_level == "high")
-			set_light(brightness_on*1.5, flashlight_power*1.1, flashlight_colour)
-		else
-			set_light(brightness_on, flashlight_power, flashlight_colour)
+		set_light(brightness_on*radius_multiplier, flashlight_power*brightness_multiplier, flashlight_colour)
 
 	else
 		icon_state = "[initial(icon_state)]"
@@ -233,48 +238,6 @@
 
 	else
 		..()
-
-/obj/item/device/lighting/pen
-	name = "penlight"
-	desc = "A pen-sized light, used by medical staff."
-	icon_state = "penlight"
-	item_state = "pen"
-	slot_flags = SLOT_EARS
-	brightness_on = 2
-	w_class = ITEMSIZE_TINY
-	power_use = 0
-
-/obj/item/device/lighting/color	//Default color is blue, just roll with it.
-	name = "blue flashlight"
-	desc = "A hand-held emergency light. This one is blue."
-	icon_state = "flashlight_blue"
-
-/obj/item/device/lighting/color/red
-	name = "red flashlight"
-	desc = "A hand-held emergency light. This one is red."
-	icon_state = "flashlight_red"
-
-/obj/item/device/lighting/color/orange
-	name = "orange flashlight"
-	desc = "A hand-held emergency light. This one is orange."
-	icon_state = "flashlight_orange"
-
-/obj/item/device/lighting/color/yellow
-	name = "yellow flashlight"
-	desc = "A hand-held emergency light. This one is yellow."
-	icon_state = "flashlight_yellow"
-
-/obj/item/device/lighting/maglight
-	name = "maglight"
-	desc = "A very, very heavy duty flashlight."
-	icon_state = "maglight"
-	flashlight_colour = LIGHT_COLOR_FLUORESCENT_FLASHLIGHT
-	force = 10
-	slot_flags = SLOT_BELT
-	w_class = ITEMSIZE_SMALL
-	attack_verb = list ("smacked", "thwacked", "thunked")
-	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 50)
-	hitsound = "swing_hit"
 
 /obj/item/device/lighting/drone
 	name = "low-power flashlight"

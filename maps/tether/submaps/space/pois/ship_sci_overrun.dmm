@@ -238,7 +238,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/device/lighting/pen,
+/obj/item/device/lighting/flashlight/pen,
 /turf/simulated/floor/tiled/white/airless,
 /area/tether_away/debrisfield/explored)
 "aR" = (

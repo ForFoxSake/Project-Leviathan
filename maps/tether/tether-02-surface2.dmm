@@ -435,7 +435,7 @@
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/device/lighting/pen{
+/obj/item/device/lighting/flashlight/pen{
 	pixel_x = -3;
 	pixel_y = -3
 	},

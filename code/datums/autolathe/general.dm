@@ -40,7 +40,7 @@
 
 /datum/category_item/autolathe/general/flashlight
 	name = "flashlight"
-	path =/obj/item/device/lighting
+	path =/obj/item/device/lighting/flashlight
 
 /datum/category_item/autolathe/general/floor_light
 	name = "floor light"
@@ -127,7 +127,7 @@
 
 /datum/category_item/autolathe/general/maglight
 	name = "maglight"
-	path =/obj/item/device/lighting/maglight
+	path =/obj/item/device/lighting/flashlight/maglight
 
 /datum/category_item/autolathe/general/handcuffs
 	name = "handcuffs"

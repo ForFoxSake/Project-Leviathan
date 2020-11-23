@@ -877,7 +877,7 @@
 "qS" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/plating,/area/awaymission/zoo)
 "qT" = (/obj/item/trash/chips,/turf/simulated/floor/plating,/area/awaymission/zoo)
 "qU" = (/obj/structure/table/rack,/obj/item/weapon/storage/box/lights/mixed,/turf/simulated/floor/plating,/area/awaymission/zoo)
-"qV" = (/obj/structure/table/rack{dir = 1},/obj/item/weapon/extinguisher,/obj/item/clothing/head/hardhat/red,/obj/item/device/lighting,/turf/simulated/floor/plating,/area/awaymission/zoo)
+"qV" = (/obj/structure/table/rack{dir = 1},/obj/item/weapon/extinguisher,/obj/item/clothing/head/hardhat/red,/obj/item/device/lighting/flashlight,/turf/simulated/floor/plating,/area/awaymission/zoo)
 "qW" = (/obj/machinery/floodlight,/turf/simulated/floor,/area/awaymission/zoo)
 "qX" = (/obj/structure/flora/ausbushes/fullgrass,/turf/simulated/floor/holofloor/snow,/area/awaymission/zoo)
 "qY" = (/obj/structure/flora/ausbushes/palebush,/turf/simulated/floor/holofloor/snow,/area/awaymission/zoo)

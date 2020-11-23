@@ -9,7 +9,7 @@
 		/obj/item/weapon/spacecash,
 		/obj/item/weapon/card,
 		/obj/item/clothing/mask/smokable/cigarette/,
-		/obj/item/device/lighting/pen,
+		/obj/item/device/lighting/flashlight/pen,
 		/obj/item/device/tape,
 		/obj/item/weapon/cartridge,
 		/obj/item/device/encryptionkey,

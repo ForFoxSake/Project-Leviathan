@@ -45,7 +45,7 @@ var/datum/antagonist/technomancer/technomancers
 	var/obj/item/weapon/technomancer_core/core = new /obj/item/weapon/technomancer_core(technomancer_mob)
 	technomancer_mob.equip_to_slot_or_del(core, slot_back)
 	technomancer_belongings.Add(core) // So it can be Tracked.
-	technomancer_mob.equip_to_slot_or_del(new /obj/item/device/lighting(technomancer_mob), slot_belt)
+	technomancer_mob.equip_to_slot_or_del(new /obj/item/device/lighting/flashlight(technomancer_mob), slot_belt)
 	technomancer_mob.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(technomancer_mob), slot_shoes)
 	technomancer_mob.equip_to_slot_or_del(new /obj/item/clothing/head/technomancer/master(technomancer_mob), slot_head)
 	return 1
@@ -64,7 +64,7 @@ var/datum/antagonist/technomancer/technomancers
 	var/obj/item/weapon/technomancer_core/core = new /obj/item/weapon/technomancer_core(technomancer_mob)
 	technomancer_mob.equip_to_slot_or_del(core, slot_back)
 	technomancer_belongings.Add(core) // So it can be Tracked.
-	technomancer_mob.equip_to_slot_or_del(new /obj/item/device/lighting(technomancer_mob), slot_belt)
+	technomancer_mob.equip_to_slot_or_del(new /obj/item/device/lighting/flashlight(technomancer_mob), slot_belt)
 	technomancer_mob.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(technomancer_mob), slot_shoes)
 	technomancer_mob.equip_to_slot_or_del(new /obj/item/clothing/head/technomancer/apprentice(technomancer_mob), slot_head)
 	return 1

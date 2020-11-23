@@ -212,7 +212,7 @@
 					prob(1);/obj/item/device/lighting/glowstick/orange,
 					prob(1);/obj/item/device/lighting/glowstick/red,
 					prob(1);/obj/item/device/lighting/glowstick/yellow,
-					prob(1);/obj/item/device/lighting/pen,
+					prob(1);/obj/item/device/lighting/flashlight/pen,
 					prob(1);/obj/item/device/paicard,
 					prob(1);/obj/item/weapon/card/emag,
 					prob(1);/obj/item/clothing/mask/gas/voice,

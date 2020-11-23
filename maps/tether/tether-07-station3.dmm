@@ -19375,9 +19375,9 @@
 "aHk" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/nifsofts_medical,
-/obj/item/device/lighting/pen,
-/obj/item/device/lighting/pen,
-/obj/item/device/lighting/pen,
+/obj/item/device/lighting/flashlight/pen,
+/obj/item/device/lighting/flashlight/pen,
+/obj/item/device/lighting/flashlight/pen,
 /obj/machinery/firealarm{
 	dir = 2;
 	layer = 3.3;
@@ -21534,7 +21534,7 @@
 "aKv" = (
 /obj/structure/closet/secure_closet/CMO,
 /obj/item/weapon/storage/belt/medical,
-/obj/item/device/lighting/pen,
+/obj/item/device/lighting/flashlight/pen,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/device/defib_kit/compact/combat/loaded,

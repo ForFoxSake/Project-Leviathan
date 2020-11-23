@@ -36,7 +36,7 @@ something, make sure it's not in one of the other lists.*/
 				prob(1);/obj/item/device/lighting/glowstick/orange,
 				prob(1);/obj/item/device/lighting/glowstick/red,
 				prob(1);/obj/item/device/lighting/glowstick/yellow,
-				prob(1);/obj/item/device/lighting/pen,
+				prob(1);/obj/item/device/lighting/flashlight/pen,
 				prob(4);/obj/item/weapon/cell,
 				prob(4);/obj/item/weapon/cell/device,
 				prob(3);/obj/item/weapon/cell/high,
@@ -128,7 +128,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/security/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/lighting/maglight,
+				prob(2);/obj/item/device/lighting/flashlight/maglight,
 				prob(2);/obj/item/device/flash,
 				prob(1);/obj/item/weapon/cell/device/weapon,
 				prob(1);/obj/item/clothing/mask/gas/swat,
@@ -225,7 +225,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/engineering/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/lighting/maglight,
+				prob(2);/obj/item/device/lighting/flashlight/maglight,
 				prob(3);/obj/item/clothing/mask/gas/half,
 				prob(2);/obj/item/clothing/mask/balaclava,
 				prob(2);/obj/item/weapon/storage/briefcase/inflatable,

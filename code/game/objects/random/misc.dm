@@ -16,7 +16,7 @@
 				/obj/item/weapon/weldingtool/largetank,
 				/obj/item/weapon/tool/crowbar,
 				/obj/item/weapon/tool/wrench,
-				/obj/item/device/lighting,
+				/obj/item/device/lighting/flashlight,
 				/obj/item/device/multitool)
 
 /obj/random/tool/powermaint
@@ -131,7 +131,7 @@
 				prob(2);/obj/item/weapon/tape_roll,
 				prob(2);/obj/item/taperoll/engineering,
 				prob(1);/obj/item/taperoll/atmos,
-				prob(1);/obj/item/device/lighting/maglight)
+				prob(1);/obj/item/device/lighting/flashlight/maglight)
 
 /obj/random/tech_supply/component
 	name = "random tech component"

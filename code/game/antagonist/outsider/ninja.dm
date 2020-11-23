@@ -106,7 +106,7 @@ var/datum/antagonist/ninja/ninjas
 	var/obj/item/device/radio/R = new /obj/item/device/radio/headset(player)
 	player.equip_to_slot_or_del(R, slot_l_ear)
 	player.equip_to_slot_or_del(new /obj/item/clothing/under/color/black(player), slot_w_uniform)
-	player.equip_to_slot_or_del(new /obj/item/device/lighting(player), slot_belt)
+	player.equip_to_slot_or_del(new /obj/item/device/lighting/flashlight/maglight(player), slot_belt)
 	create_id("Infiltrator", player)
 
 	var/obj/item/weapon/rig/light/ninja/ninjasuit = new(get_turf(player))

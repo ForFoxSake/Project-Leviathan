@@ -67,7 +67,7 @@
 
 	//Can hold syringes and autoinjectors, but also pills if you really wanted. Syringe-shaped objects like pens and cigarettes also fit, but why would you do that?
 	can_hold = list(/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray/autoinjector,
-					/obj/item/weapon/reagent_containers/pill, /obj/item/weapon/pen, /obj/item/device/lighting/pen, /obj/item/clothing/mask/smokable/cigarette)
+					/obj/item/weapon/reagent_containers/pill, /obj/item/weapon/pen, /obj/item/device/lighting/flashlight/pen, /obj/item/clothing/mask/smokable/cigarette)
 
 	quickmode = 1 //Starts in quickdraw mode
 	//Preloaded for your convenience!

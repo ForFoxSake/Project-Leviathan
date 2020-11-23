@@ -416,7 +416,7 @@
 "hZ" = (/obj/item/stack/nanopaste,/obj/item/stack/nanopaste,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/glass/bucket,/obj/structure/closet/crate/secure/science{req_access = list(65)},/turf/simulated/floor/tiled/dark,/area/surface/outpost/research/xenoarcheology/analysis)
 "ia" = (/obj/machinery/radiocarbon_spectrometer,/turf/simulated/floor/tiled/dark,/area/surface/outpost/research/xenoarcheology/analysis)
 "ib" = (/obj/machinery/radiocarbon_spectrometer,/obj/machinery/firealarm{dir = 4; pixel_x = 24},/turf/simulated/floor/tiled/dark,/area/surface/outpost/research/xenoarcheology/analysis)
-"ic" = (/obj/structure/table/rack,/obj/item/weapon/storage/toolbox/emergency,/obj/item/clothing/accessory/armband/science,/obj/item/clothing/glasses/science,/obj/item/device/suit_cooling_unit,/obj/item/weapon/extinguisher,/obj/item/device/lighting,/turf/simulated/floor/plating,/area/surface/outpost/research/xenoarcheology/emergencystorage)
+"ic" = (/obj/structure/table/rack,/obj/item/weapon/storage/toolbox/emergency,/obj/item/clothing/accessory/armband/science,/obj/item/clothing/glasses/science,/obj/item/device/suit_cooling_unit,/obj/item/weapon/extinguisher,/obj/item/device/lighting/flashlight,/turf/simulated/floor/plating,/area/surface/outpost/research/xenoarcheology/emergencystorage)
 "id" = (/turf/simulated/floor/plating{icon_state = "asteroidplating2"},/area/surface/outpost/research/xenoarcheology)
 "ie" = (/turf/simulated/wall/dungeon,/area/surface/cave/unexplored/normal)
 "if" = (/obj/item/stack/flag/green,/turf/simulated/mineral/floor/ignore_mapgen/sif,/area/surface/cave/explored/normal)

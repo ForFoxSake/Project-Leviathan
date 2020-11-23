@@ -142,7 +142,7 @@
 	corpseuniform = /obj/item/clothing/under/rank/medical
 	corpsesuit = /obj/item/clothing/suit/storage/toggle/labcoat
 	corpseback = /obj/item/weapon/storage/backpack/medic
-	corpsepocket1 = /obj/item/device/lighting/pen
+	corpsepocket1 = /obj/item/device/lighting/flashlight/pen
 	corpseshoes = /obj/item/clothing/shoes/black
 	corpseid = 1
 	corpseidjob = "Medical Doctor"

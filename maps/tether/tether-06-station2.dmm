@@ -9580,11 +9580,11 @@
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "oI" = (
-/obj/item/device/lighting{
+/obj/item/device/lighting/flashlight{
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/item/device/lighting{
+/obj/item/device/lighting/flashlight{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -12660,11 +12660,11 @@
 /area/medical/resleeving)
 "tW" = (
 /obj/structure/table/glass,
-/obj/item/device/lighting/pen{
+/obj/item/device/lighting/flashlight/pen{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/lighting/pen{
+/obj/item/device/lighting/flashlight/pen{
 	pixel_x = -3;
 	pixel_y = -3
 	},

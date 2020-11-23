@@ -125,7 +125,7 @@
 /area/submap/virgo2/Manor1)
 "aC" = (
 /obj/structure/table/woodentable,
-/obj/item/device/lighting/maglight,
+/obj/item/device/lighting/flashlight/maglight,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/virgo2/Manor1)
 "aD" = (
