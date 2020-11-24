@@ -26,7 +26,7 @@
 	name = OUTFIT_JOB_NAME("Bartender")
 	uniform = /obj/item/clothing/under/rank/bartender
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/bar
+	pda_type = /obj/item/modular_computer/pda/service
 	backpack_contents = list(/obj/item/weapon/gun/projectile/colt = 1, /obj/item/clothing/accessory/permit/gun/bar = 1)
 
 /decl/hierarchy/outfit/job/service/bartender/post_equip(mob/living/carbon/human/H)
@@ -45,7 +45,7 @@
 	suit = /obj/item/clothing/suit/chef
 	head = /obj/item/clothing/head/chefhat
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/chef
+	pda_type = /obj/item/modular_computer/pda/service
 
 /decl/hierarchy/outfit/job/service/chef/cook
 	name = OUTFIT_JOB_NAME("Cook")
@@ -69,20 +69,20 @@
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/hyd
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/hyd
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/botanist
+	pda_type = /obj/item/modular_computer/pda/service
 
 /decl/hierarchy/outfit/job/service/janitor
 	name = OUTFIT_JOB_NAME("Janitor")
 	uniform = /obj/item/clothing/under/rank/janitor
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/janitor
+	pda_type = /obj/item/modular_computer/pda/service
 
 /decl/hierarchy/outfit/job/librarian
 	name = OUTFIT_JOB_NAME("Librarian")
 	uniform = /obj/item/clothing/under/suit_jacket/red
 	l_hand = /obj/item/weapon/barcodescanner
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/librarian
+	pda_type = /obj/item/modular_computer/pda/service
 
 /decl/hierarchy/outfit/job/internal_affairs_agent
 	name = OUTFIT_JOB_NAME("Internal affairs agent")
@@ -93,7 +93,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	l_hand = /obj/item/weapon/clipboard
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/lawyer
+	pda_type = /obj/item/modular_computer/pda/security
 
 /decl/hierarchy/outfit/job/internal_affairs_agent/post_equip(var/mob/living/carbon/human/H)
 	..()
@@ -110,7 +110,7 @@
 	uniform = /obj/item/clothing/under/rank/chaplain
 	l_hand = /obj/item/weapon/storage/bible
 	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/chaplain
+	pda_type = /obj/item/modular_computer/pda/chaplain
 
 /decl/hierarchy/outfit/job/explorer
 	name = OUTFIT_JOB_NAME("Explorer")
@@ -123,6 +123,6 @@
 	id_slot = slot_wear_id
 	id_type = /obj/item/weapon/card/id/civilian
 	pda_slot = slot_belt
-	pda_type = /obj/item/device/pda/cargo // Brown looks more rugged
+	pda_type = /obj/item/modular_computer/pda/exploration // Brown looks more rugged
 	r_pocket = /obj/item/device/gps/explorer
 	id_pda_assignment = "Explorer"

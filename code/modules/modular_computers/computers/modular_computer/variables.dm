@@ -31,8 +31,10 @@
 	var/icon_state_screensaver = null
 	var/max_hardware_size = 0								// Maximal hardware size. Currently, tablets have 1, laptops 2 and consoles 3. Limits what hardware types can be installed.
 	var/steel_sheet_cost = 5								// Amount of steel sheets refunded when disassembling an empty frame of this computer.
-	var/light_strength = 0									// Intensity of light this computer emits. Comparable to numbers light fixtures use.
+	var/screen_light_strength = 0							// Intensity of light this computer emits. Comparable to numbers light fixtures use.
+	var/screen_light_range = 2								// Intensity of light this computer emits. Comparable to numbers light fixtures use.
 	var/list/idle_threads = list()							// Idle programs on background. They still receive process calls but can't be interacted with.
+	var/trigger_code = null									// Passphrase for traitors to get into their uplink.
 
 	// Damage of the chassis. If the chassis takes too much damage it will break apart.
 	var/damage = 0				// Current damage level
@@ -51,3 +53,6 @@
 	var/obj/item/weapon/computer_hardware/hard_drive/portable/portable_drive		// Portable data storage
 	var/obj/item/weapon/computer_hardware/ai_slot/ai_slot							// AI slot, an intellicard housing that allows modifications of AIs.
 	var/obj/item/weapon/computer_hardware/tesla_link/tesla_link						// Tesla Link, Allows remote charging from nearest APC.
+	var/obj/item/weapon/computer_hardware/scanner/scanner							// One of several optional scanner attachments.
+//	var/obj/item/weapon/computer_hardware/gps_sensor/gps_sensor						// GPS sensor used to track device
+	var/obj/item/weapon/computer_hardware/led/led									// Light Emitting Diode, used for flashlight functionality in PDAs

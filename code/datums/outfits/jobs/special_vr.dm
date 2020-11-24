@@ -7,7 +7,7 @@
 	l_ear = /obj/item/device/radio/headset/centcom
 	glasses = /obj/item/clothing/glasses/omnihud/all
 	id_type = /obj/item/weapon/card/id/centcom
-	pda_type = /obj/item/device/pda/centcom
+	pda_type = /obj/item/modular_computer/pda/ert
 
 /decl/hierarchy/outfit/job/clown
 	name = OUTFIT_JOB_NAME("Clown")
@@ -16,7 +16,7 @@
 	shoes = /obj/item/clothing/shoes/clown_shoes
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	backpack_contents = list(/obj/item/weapon/stamp/clown = 1, /obj/item/weapon/bikehorn = 1)
-	pda_type = /obj/item/device/pda/clown
+	pda_type = /obj/item/modular_computer/pda
 	flags = 0
 
 /decl/hierarchy/outfit/job/mime
@@ -26,7 +26,7 @@
 	head = /obj/item/clothing/head/soft/mime
 	mask = /obj/item/clothing/mask/gas/mime
 	backpack_contents = list(/obj/item/weapon/pen/crayon/mime = 1)
-	pda_type = /obj/item/device/pda/mime
+	pda_type = /obj/item/modular_computer/pda
 	
 	post_equip(var/mob/living/carbon/human/H)
 		..()

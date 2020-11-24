@@ -49,6 +49,18 @@
 			return
 		found = 1
 		tesla_link = H
+	else if(istype(H, /obj/item/weapon/computer_hardware/led))
+		if(led)
+			to_chat(user, "This computer's tesla link slot is already occupied by \the [led].")
+			return
+		found = 1
+		led = H
+	else if(istype(H, /obj/item/weapon/computer_hardware/scanner))
+		if(scanner)
+			to_chat(user, "This computer's tesla link slot is already occupied by \the [scanner].")
+			return
+		found = 1
+		scanner = H
 	if(found)
 		to_chat(user, "You install \the [H] into \the [src]")
 		H.holder2 = src
@@ -84,6 +96,12 @@
 	if(tesla_link == H)
 		tesla_link = null
 		found = 1
+	if(led == H)
+		led = null
+		found = 1
+	if(scanner == H)
+		scanner = null
+		found = 1
 	if(found)
 		if(user)
 			to_chat(user, "You remove \the [H] from \the [src].")
@@ -115,6 +133,10 @@
 		return processor_unit
 	if(tesla_link && (tesla_link.name == name))
 		return tesla_link
+	if(led && (led.name == name))
+		return led
+	if(scanner && (scanner.name == name))
+		return scanner
 	return null
 
 // Returns list of all components
@@ -136,4 +158,8 @@
 		all_components.Add(processor_unit)
 	if(tesla_link)
 		all_components.Add(tesla_link)
+	if(led)
+		all_components.Add(led)
+	if(scanner)
+		all_components.Add(scanner)
 	return all_components

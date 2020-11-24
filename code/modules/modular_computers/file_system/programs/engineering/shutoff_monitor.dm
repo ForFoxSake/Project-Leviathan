@@ -10,6 +10,7 @@
 	requires_ntnet = 1
 	network_destination = "shutoff valve control computer"
 	size = 5
+	usage_flags = PROGRAM_ALL_BUT_PDA
 	var/has_alert = 0
 
 /datum/nano_module/shutoff_monitor

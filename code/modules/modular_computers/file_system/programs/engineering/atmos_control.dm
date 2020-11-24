@@ -12,6 +12,7 @@
 	requires_ntnet_feature = NTNET_SYSTEMCONTROL
 	usage_flags = PROGRAM_LAPTOP | PROGRAM_CONSOLE
 	size = 17
+	usage_flags = PROGRAM_ALL_BUT_PDA
 
 /datum/nano_module/atmos_control
 	name = "Atmospherics Control"

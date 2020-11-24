@@ -12,6 +12,7 @@ var/global/ntnet_card_uid = 1
 	var/identification_string = "" 	// Identification string, technically nickname seen in the network. Can be set by user.
 	var/long_range = 0
 	var/ethernet = 0 // Hard-wired, therefore always on, ignores NTNet wireless checks.
+	var/datum/radio_frequency/radio_connection	// Used by signaller code
 	malfunction_probability = 1
 
 /obj/item/weapon/computer_hardware/network_card/diagnostics(var/mob/user)
@@ -25,10 +26,48 @@ var/global/ntnet_card_uid = 1
 	if(ethernet)
 		to_chat(user, "OpenEth (Physical Connection) - Physical network connection port")
 
-/obj/item/weapon/computer_hardware/network_card/New(var/l)
-	..(l)
+/obj/item/weapon/computer_hardware/network_card/Initialize()
+	. = ..()
 	identification_id = ntnet_card_uid
 	ntnet_card_uid++
+	set_frequency(1457)
+
+/obj/item/weapon/computer_hardware/network_card/Destroy()
+	if (radio_connection)
+		radio_controller.remove_object(src, radio_connection.frequency)
+	return ..()
+
+/obj/item/weapon/computer_hardware/network_card/proc/set_frequency(new_frequency)
+	if(ethernet || !new_frequency)
+		return
+
+	if(radio_connection)
+		if(new_frequency == radio_connection.frequency)
+			return
+		radio_controller.remove_object(src, radio_connection.frequency)
+
+	radio_connection = radio_controller.add_object(src, sanitize_frequency(new_frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ), RADIO_CHAT)
+
+/obj/item/weapon/computer_hardware/network_card/proc/signal(new_frequency, code)
+	if(!radio_connection || !check_functionality())
+		return
+
+	set_frequency(new_frequency)
+
+	var/datum/signal/signal = new
+	signal.source = src
+	signal.encryption = CLAMP(code, 1, 100)
+	signal.data["message"] = "ACTIVATE"
+	spawn(0)
+		radio_connection.post_signal(src, signal)
+
+/obj/item/weapon/computer_hardware/network_card/receive_signal(datum/signal/signal)
+	if(!check_functionality() || !holder2 || !holder2.enabled)
+		return
+
+	for(var/datum/computer_file/program/signaller/S in holder2.hard_drive.stored_files)
+		if(S.program_state != PROGRAM_STATE_KILLED)
+			S.receive_signal(signal)
 
 /obj/item/weapon/computer_hardware/network_card/advanced
 	name = "advanced NTNet network card"

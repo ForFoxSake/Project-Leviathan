@@ -46,6 +46,15 @@
 	icon_state = "hdd_small"
 	hardware_size = 1
 
+/obj/item/weapon/computer_hardware/hard_drive/pda
+	name = "pda hard drive"
+	desc = "A small hard drive especially for pdas."
+	power_usage = 3
+	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
+	max_capacity = 45
+	icon_state = "hdd_micro"
+	hardware_size = 1
+
 /obj/item/weapon/computer_hardware/hard_drive/micro
 	name = "micro hard drive"
 	desc = "A small micro hard drive for portable devices."

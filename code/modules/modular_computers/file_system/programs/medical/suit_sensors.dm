@@ -10,3 +10,4 @@
 	requires_ntnet = 1
 	network_destination = "crew lifesigns monitoring system"
 	size = 11
+	usage_flags = PROGRAM_ALL_BUT_PDA

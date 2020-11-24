@@ -539,7 +539,7 @@ var/global/datum/controller/occupations/job_master
 
 		// EMAIL GENERATION
 		// Email addresses will be created under this domain name. Mostly for the looks.
-		var/domain = "freemail.nt"
+		var/domain = pick(using_map.usable_email_tlds)
 		var/sanitized_name = sanitize(replacetext(replacetext(lowertext(H.real_name), " ", "."), "'", ""))
 		var/complete_login = "[sanitized_name]@[domain]"
 
@@ -558,6 +558,22 @@ var/global/datum/controller/occupations/job_master
 			EA.login = 	complete_login
 			to_chat(H, "Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.")
 			H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
+
+			// Log them in automatically. Saves some faff.
+			if(ishuman(H))
+				for(var/obj/item/modular_computer/C in H.GetAllContents())
+					for(var/datum/computer_file/program/email_client/P in C.hard_drive.stored_files)
+						if(P)
+							P.stored_login = EA.login
+							P.stored_password = EA.password
+							P.update_email()
+			/*else if(issilicon(H))
+				var/mob/living/silicon/S = H
+				var/datum/nano_module/email_client/my_client = S.get_subsystem_from_path(/datum/nano_module/email_client)
+				if(my_client)
+					my_client.stored_login = EA.login
+					my_client.stored_password = EA.password
+					my_client.log_in()*/
 		// END EMAIL GENERATION
 
 		//Gives glasses to the vision impaired

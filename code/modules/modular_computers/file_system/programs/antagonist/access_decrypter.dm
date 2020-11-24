@@ -10,6 +10,7 @@
 	available_on_ntnet = 0
 	available_on_syndinet = 1
 	nanomodule_path = /datum/nano_module/program/access_decrypter/
+	usage_flags = PROGRAM_ALL_BUT_PDA
 	var/message = ""
 	var/running = FALSE
 	var/progress = 0

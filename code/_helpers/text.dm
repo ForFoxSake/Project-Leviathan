@@ -387,6 +387,38 @@ proc/TextPreview(var/string,var/len=40)
 	t = replacetext(t, "\[editorbr\]", "")
 	return t
 
+//Will kill most formatting; not recommended.
+/proc/html2pencode(t)
+	t = replacetext(t, "\n", "")
+	t = replacetext(t, "<BR>", "\n")
+	t = replacetext(t, "<br>", "\n")
+	t = replacetext(t, "<B>", "\[b\]")
+	t = replacetext(t, "</B>", "\[/b\]")
+	t = replacetext(t, "<I>", "\[i\]")
+	t = replacetext(t, "</I>", "\[/i\]")
+	t = replacetext(t, "<U>", "\[u\]")
+	t = replacetext(t, "</U>", "\[/u\]")
+	t = replacetext(t, "<center>", "\[center\]")
+	t = replacetext(t, "</center>", "\[/center\]")
+	t = replacetext(t, "<H1>", "\[h1\]")
+	t = replacetext(t, "</H1>", "\[/h1\]")
+	t = replacetext(t, "<H2>", "\[h2\]")
+	t = replacetext(t, "</H2>", "\[/h2\]")
+	t = replacetext(t, "<H3>", "\[h3\]")
+	t = replacetext(t, "</H3>", "\[/h3\]")
+	t = replacetext(t, "<li>", "\[*\]")
+	t = replacetext(t, "<HR>", "\[hr\]")
+	t = replacetext(t, "<ul>", "\[list\]")
+	t = replacetext(t, "</ul>", "\[/list\]")
+	t = replacetext(t, "<table>", "\[grid\]")
+	t = replacetext(t, "</table>", "\[/grid\]")
+	t = replacetext(t, "<tr>", "\[row\]")
+	t = replacetext(t, "<td>", "\[cell\]")
+	t = replacetext(t, "<img src = ntlogo.png>", "\[logo\]")
+	t = replacetext(t, "<span class=\"paper_field\"></span>", "\[field\]")
+	t = strip_html_properly(t)
+	return t
+
 // Random password generator
 /proc/GenerateKey()
 	//Feel free to move to Helpers.

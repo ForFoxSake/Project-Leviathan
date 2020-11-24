@@ -11,6 +11,7 @@
 	requires_ntnet = 1
 	network_destination = "supermatter monitoring system"
 	size = 5
+	usage_flags = PROGRAM_ALL_BUT_PDA
 	var/last_status = 0
 
 /datum/computer_file/program/supermatter_monitor/process_tick()

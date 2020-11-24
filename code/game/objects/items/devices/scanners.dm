@@ -35,13 +35,18 @@ HALOGEN COUNTER	- Radcount on mobs
 /obj/item/device/healthanalyzer/do_surgery(mob/living/M, mob/living/user)
 	if(user.a_intent != I_HELP) //in case it is ever used as a surgery tool
 		return ..()
-	scan_mob(M, user) //default surgery behaviour is just to scan as usual
+	user.show_message(medical_scan_action(M, user, src, mode), 1) //default surgery behaviour is just to scan as usual
 	return 1
 
 /obj/item/device/healthanalyzer/attack(mob/living/M, mob/living/user)
-	scan_mob(M, user)
+	user.show_message(medical_scan_action(M, user, src, mode), 1)
 
-/obj/item/device/healthanalyzer/proc/scan_mob(mob/living/M, mob/living/user)
+/proc/medical_scan_action(mob/living/M, mob/living/user, obj/item/HA, mode)
+	if(!istype(M) || !istype(user))
+		return
+	var/obj/item/device/healthanalyzer/analyzer
+	if(istype(HA, /obj/item/device/healthanalyzer))
+		analyzer = HA
 	var/dat = ""
 	if ((CLUMSY in user.mutations) && prob(50))
 		user.visible_message("<span class='warning'>\The [user] has analyzed the floor's vitals!</span>", "<span class='warning'>You try to analyze the floor's vitals!</span>")
@@ -56,7 +61,8 @@ HALOGEN COUNTER	- Radcount on mobs
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
-	flick("[icon_state]-scan", src)	//makes it so that it plays the scan animation on a succesful scan
+	if(analyzer)
+		flick("[analyzer.icon_state]-scan", analyzer)	//makes it so that it plays the scan animation on a succesful scan
 	user.visible_message("<span class='notice'>[user] has analyzed [M]'s vitals.</span>","<span class='notice'>You have analyzed [M]'s vitals.</span>")
 
 	if (!ishuman(M) || M.isSynthetic())
@@ -114,7 +120,7 @@ HALOGEN COUNTER	- Radcount on mobs
 		OX = fake_oxy > 50 ? 		"<span class='warning'>Severe oxygen deprivation detected</span>" 	: 	"Subject bloodstream oxygen level normal"
 	dat += "[OX] | [TX] | [BU] | [BR]<br>"
 	if(M.radiation)
-		if(advscan >= 2 && showadvscan == 1)
+		if(analyzer && analyzer.advscan >= 2 && analyzer.showadvscan == 1)
 			var/severity = ""
 			if(M.radiation >= 75)
 				severity = "Critical"
@@ -145,7 +151,7 @@ HALOGEN COUNTER	- Radcount on mobs
 				for(var/d in reagentdata)
 					dat += reagentdata[d]
 			if(unknown)
-				if(advscan >= 3 && showadvscan == 1)
+				if(analyzer && analyzer.advscan >= 3 && analyzer.showadvscan == 1)
 					dat += "<span class='warning'>Warning: Non-medical reagent[(unknown>1)?"s":""] detected in subject's blood:</span><br>"
 					for(var/d in unknownreagents)
 						dat += unknownreagents[d]
@@ -159,17 +165,17 @@ HALOGEN COUNTER	- Radcount on mobs
 				var/datum/reagent/T = B
 				if(T.scannable)
 					stomachreagentdata["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
-					if (advscan == 0 || showadvscan == 0)
+					if (!analyzer || analyzer.advscan == 0 || analyzer.showadvscan == 0)
 						dat += "<span class='notice'>[T.name] found in subject's stomach.</span><br>"
 				else
 					++unknown
 					stomachunknownreagents["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
-			if(advscan >= 1 && showadvscan == 1)
+			if(analyzer && analyzer.advscan >= 1 && analyzer.showadvscan == 1)
 				dat += "<span class='notice'>Beneficial reagents detected in subject's stomach:</span><br>"
 				for(var/d in stomachreagentdata)
 					dat += stomachreagentdata[d]
 			if(unknown)
-				if(advscan >= 3 && showadvscan == 1)
+				if(analyzer && analyzer.advscan >= 3 && analyzer.showadvscan == 1)
 					dat += "<span class='warning'>Warning: Non-medical reagent[(unknown > 1)?"s":""] found in subject's stomach:</span><br>"
 					for(var/d in stomachunknownreagents)
 						dat += stomachunknownreagents[d]
@@ -183,17 +189,17 @@ HALOGEN COUNTER	- Radcount on mobs
 				var/datum/reagent/T = B
 				if(T.scannable)
 					touchreagentdata["[T.id]"] = "<span class='notice'>\t[round(C.touching.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
-					if (advscan == 0 || showadvscan == 0)
+					if (!analyzer || analyzer.advscan == 0 || analyzer.showadvscan == 0)
 						dat += "<span class='notice'>[T.name] found in subject's dermis.</span><br>"
 				else
 					++unknown
 					touchunknownreagents["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
-			if(advscan >= 1 && showadvscan == 1)
+			if(analyzer && analyzer.advscan >= 1 && analyzer.showadvscan == 1)
 				dat += "<span class='notice'>Beneficial reagents detected in subject's dermis:</span><br>"
 				for(var/d in touchreagentdata)
 					dat += touchreagentdata[d]
 			if(unknown)
-				if(advscan >= 3 && showadvscan == 1)
+				if(analyzer && analyzer.advscan >= 3 && analyzer.showadvscan == 1)
 					dat += "<span class='warning'>Warning: Non-medical reagent[(unknown > 1)?"s":""] found in subject's dermis:</span><br>"
 					for(var/d in touchunknownreagents)
 						dat += touchunknownreagents[d]
@@ -218,7 +224,7 @@ HALOGEN COUNTER	- Radcount on mobs
 		dat += "<span class='warning'>Severe brain damage detected. Subject likely to have a traumatic brain injury.</span><br>"
 	else if (M.getBrainLoss() >= 10)
 		dat += "<span class='warning'>Significant brain damage detected. Subject may have had a concussion.</span><br>"
-	else if (M.getBrainLoss() >= 1 && advscan >= 2 && showadvscan == 1)
+	else if (analyzer && M.getBrainLoss() >= 1 && analyzer.advscan >= 2 && analyzer.showadvscan == 1)
 		dat += "<span class='warning'>Minor brain damage detected.</span><br>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -245,7 +251,7 @@ HALOGEN COUNTER	- Radcount on mobs
 			if(e.status & ORGAN_BROKEN)
 				if((e.name in list("l_arm", "r_arm", "l_leg", "r_leg", "head", "chest", "groin")) && (!e.splinted))
 					fracture_dat += "<span class='warning'>Unsecured fracture in subject [e.name]. Splinting recommended for transport.</span><br>"
-				else if(advscan >= 1 && showadvscan == 1)
+				else if(analyzer && analyzer.advscan >= 1 && analyzer.showadvscan == 1)
 					fracture_dat += "<span class='warning'>Bone fractures detected in subject [e.name].</span><br>"
 				else
 					basic_fracture = 1
@@ -255,7 +261,7 @@ HALOGEN COUNTER	- Radcount on mobs
 			// IB
 			for(var/datum/wound/W in e.wounds)
 				if(W.internal)
-					if(advscan >= 1 && showadvscan == 1)
+					if(analyzer && analyzer.advscan >= 1 && analyzer.showadvscan == 1)
 						ib_dat += "<span class='warning'>Internal bleeding detected in subject [e.name].</span><br>"
 					else
 						basic_ib = 1
@@ -279,7 +285,7 @@ HALOGEN COUNTER	- Radcount on mobs
 			else
 				dat += "<span class='notice'>Blood Level Normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]</span><br>"
 		dat += "<span class='notice'>Subject's pulse: <font color='[H.pulse == PULSE_THREADY || H.pulse == PULSE_NONE ? "red" : "blue"]'>[H.get_pulse(GETPULSE_TOOL)] bpm.</font></span>"
-	user.show_message(dat, 1)
+	return dat
 
 /obj/item/device/healthanalyzer/verb/toggle_mode()
 	set name = "Switch Verbosity"
@@ -440,15 +446,17 @@ HALOGEN COUNTER	- Radcount on mobs
 	var/recent_fail = 0
 
 /obj/item/device/reagent_scanner/afterattack(obj/O, mob/living/user, proximity)
-	if(!proximity || user.stat || !istype(O))
+	if(!proximity || user.stat)
 		return
-	if(!istype(user))
-		return
+	to_chat(user, reagent_scan_results(O, user, src, details))
+
+/proc/reagent_scan_results(obj/O, mob/living/user, obj/S, var/details = 0)
+	if(!istype(user) || !istype(O))
+		return span("warning", "Scan failed.")
 
 	if(!isnull(O.reagents))
 		if(!(O.flags & OPENCONTAINER)) // The idea is that the scanner has to touch the reagents somehow. This is done to prevent cheesing unidentified autoinjectors.
-			to_chat(user, span("warning", "\The [O] is sealed, and cannot be scanned by \the [src] until unsealed."))
-			return
+			return span("warning", "\The [O] is sealed, and cannot be scanned by \the [S] until unsealed.")
 
 		var/dat = ""
 		if(O.reagents.reagent_list.len > 0)
@@ -456,13 +464,13 @@ HALOGEN COUNTER	- Radcount on mobs
 			for (var/datum/reagent/R in O.reagents.reagent_list)
 				dat += "\n \t " + span("notice", "[R][details ? ": [R.volume / one_percent]%" : ""]")
 		if(dat)
-			to_chat(user, span("notice", "Chemicals found: [dat]"))
+			. = span("notice", "Chemicals found: [dat]")
 		else
-			to_chat(user, span("notice", "No active chemical agents found in [O]."))
+			. = span("notice", "No active chemical agents found in [O].")
 	else
-		to_chat(user, span("notice", "No significant chemical agents found in [O]."))
+		. = span("notice", "No significant chemical agents found in [O].")
 
-	return
+	return .
 
 /obj/item/device/reagent_scanner/adv
 	name = "advanced reagent scanner"

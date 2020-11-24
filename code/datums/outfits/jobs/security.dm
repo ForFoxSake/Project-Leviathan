@@ -16,7 +16,7 @@
 	suit = /obj/item/clothing/suit/armor/pcarrier/medium/security
 	suit_store = /obj/item/clothing/head/helmet
 	id_type = /obj/item/weapon/card/id/security/head
-	pda_type = /obj/item/device/pda/heads/hos
+	pda_type = /obj/item/modular_computer/pda/heads/hos
 
 /decl/hierarchy/outfit/job/security/hos/post_equip(var/mob/living/carbon/human/H)
 	..()
@@ -35,7 +35,7 @@
 	suit_store = /obj/item/clothing/head/helmet
 	l_pocket = /obj/item/device/flash
 	id_type = /obj/item/weapon/card/id/security
-	pda_type = /obj/item/device/pda/warden
+	pda_type = /obj/item/modular_computer/pda/forensics
 
 /decl/hierarchy/outfit/job/security/detective
 	name = OUTFIT_JOB_NAME("Detective")
@@ -48,7 +48,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	r_hand = /obj/item/weapon/storage/briefcase/crimekit
 	id_type = /obj/item/weapon/card/id/security
-	pda_type = /obj/item/device/pda/detective
+	pda_type = /obj/item/modular_computer/pda/forensics
 	backpack = /obj/item/weapon/storage/backpack
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
 	backpack_contents = list(/obj/item/weapon/storage/box/evidence = 1, /obj/item/weapon/gun/projectile/colt/detective = 1, /obj/item/ammo_magazine/m45 = 1)
@@ -68,4 +68,4 @@
 	suit_store = /obj/item/clothing/head/helmet
 	l_pocket = /obj/item/device/lighting/flare
 	id_type = /obj/item/weapon/card/id/security
-	pda_type = /obj/item/device/pda/security
+	pda_type = /obj/item/modular_computer/pda/security

@@ -9,6 +9,7 @@
 	required_access = access_change_ids
 	requires_ntnet = 0
 	size = 8
+	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
 
 /datum/nano_module/program/card_mod
 	name = "ID card modification program"

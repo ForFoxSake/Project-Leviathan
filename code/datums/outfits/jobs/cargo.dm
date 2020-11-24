@@ -10,13 +10,13 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_hand = /obj/item/weapon/clipboard
 	id_type = /obj/item/weapon/card/id/cargo/head
-	pda_type = /obj/item/device/pda/quartermaster
+	pda_type = /obj/item/modular_computer/pda/logistics
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
 	name = OUTFIT_JOB_NAME("Cargo technician")
 	uniform = /obj/item/clothing/under/rank/cargotech
 	id_type = /obj/item/weapon/card/id/cargo
-	pda_type = /obj/item/device/pda/cargo
+	pda_type = /obj/item/modular_computer/pda/logistics
 
 /decl/hierarchy/outfit/job/cargo/mining
 	name = OUTFIT_JOB_NAME("Shaft miner")
@@ -25,6 +25,6 @@
 	backpack = /obj/item/weapon/storage/backpack/industrial
 	satchel_one  = /obj/item/weapon/storage/backpack/satchel/eng
 	id_type = /obj/item/weapon/card/id/cargo
-	pda_type = /obj/item/device/pda/shaftminer
+	pda_type = /obj/item/modular_computer/pda/logistics
 	backpack_contents = list(/obj/item/weapon/gun/projectile/colt = 1, /obj/item/weapon/tool/crowbar = 1, /obj/item/weapon/storage/bag/ore = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL

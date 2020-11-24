@@ -10,9 +10,7 @@
 	available_on_ntnet = 1
 	nanomodule_path = /datum/nano_module/email_administration
 	required_access = access_network
-
-
-
+	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
 
 /datum/nano_module/email_administration/
 	name = "Email Client"

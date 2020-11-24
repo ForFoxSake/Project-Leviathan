@@ -10,6 +10,7 @@
 	required_access = access_network
 	available_on_ntnet = 1
 	nanomodule_path = /datum/nano_module/computer_ntnetmonitor/
+	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
 
 /datum/nano_module/computer_ntnetmonitor
 	name = "NTNet Diagnostics and Monitoring"

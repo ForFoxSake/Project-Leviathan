@@ -71,21 +71,49 @@
 	icon_state = icon_state_unpowered
 
 	overlays.Cut()
-	if(bsod)
-		overlays.Add("bsod")
-		return
-	if(!enabled)
-		if(icon_state_screensaver)
-			overlays.Add(icon_state_screensaver)
-		set_light(0)
-		return
-	set_light(light_strength)
-	if(active_program)
-		overlays.Add(active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu)
-		if(active_program.program_key_state)
-			overlays.Add(active_program.program_key_state)
+	if (screen_on)
+		if(bsod)
+			overlays.Add("bsod")
+			set_light(screen_light_range, screen_light_strength, AverageColor(icon(icon,"bsod"), TRUE), skip_screen_check = TRUE)
+			return
+		if(!enabled)
+			if(icon_state_screensaver)
+				overlays.Add(icon_state_screensaver)
+			set_light(0, skip_screen_check = TRUE)
+			return
+		set_light(screen_light_strength)
+		if(active_program)
+			overlays.Add(active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu)
+			set_light(screen_light_range, screen_light_strength, \
+				AverageColor(icon(icon,active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu), TRUE), \
+				skip_screen_check = TRUE)
+			if(active_program.program_key_state)
+				overlays.Add(active_program.program_key_state)
+		else
+			overlays.Add(icon_state_menu)
+			set_light(screen_light_range, screen_light_strength, AverageColor(icon(icon,icon_state_menu), TRUE), skip_screen_check = TRUE)
 	else
-		overlays.Add(icon_state_menu)
+		set_light(0, skip_screen_check = TRUE)
+
+//skip_screen_check is used when set_light is called from update_icon
+/obj/item/modular_computer/set_light(range, brightness, color, skip_screen_check = FALSE)
+	if(!color)
+		color = light_color
+	if(enabled && led && led.enabled)
+		//We need to buff non handheld devices cause othervise their screen light might be brighter
+		brightness = (hardware_flag & (PROGRAM_PDA | PROGRAM_TABLET)) ? led.brightness_power : (led.brightness_power * 1.4)
+		range = (hardware_flag & (PROGRAM_PDA | PROGRAM_TABLET)) ? led.brightness_range : (led.brightness_range * 1.2)
+		..(range, brightness, led.brightness_color)
+	else if(!skip_screen_check)
+		if(screen_on)
+			if(!enabled)
+				..(0)
+				return
+			else
+				..(screen_light_range, screen_light_strength, color)
+				return
+	else
+		..(range, brightness, color)
 
 /obj/item/modular_computer/proc/turn_on(var/mob/user)
 	if(bsod)

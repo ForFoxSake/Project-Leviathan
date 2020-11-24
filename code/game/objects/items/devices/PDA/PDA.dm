@@ -1547,9 +1547,9 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 
 //Some spare PDAs in a box
-/obj/item/weapon/storage/box/PDAs
-	name = "box of spare PDAs"
-	desc = "A box of spare PDA microcomputers."
+/obj/item/weapon/storage/box/old_PDAs
+	name = "box of old PDAs"
+	desc = "A box of old, surplus PDA microcomputers."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pdabox"
 

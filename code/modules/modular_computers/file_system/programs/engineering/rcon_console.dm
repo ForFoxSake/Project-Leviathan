@@ -12,6 +12,7 @@
 	requires_ntnet_feature = NTNET_SYSTEMCONTROL
 	usage_flags = PROGRAM_LAPTOP | PROGRAM_CONSOLE
 	size = 19
+	usage_flags = PROGRAM_ALL_BUT_PDA
 
 /datum/nano_module/rcon
 	name = "Power RCON"

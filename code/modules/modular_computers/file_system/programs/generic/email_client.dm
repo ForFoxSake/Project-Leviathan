@@ -10,6 +10,8 @@
 	available_on_ntnet = 1
 	var/stored_login = ""
 	var/stored_password = ""
+	var/datum/computer_file/data/email_account/current_account
+//	var/ringtone = TRUE
 
 	nanomodule_path = /datum/nano_module/email_client
 
@@ -35,9 +37,6 @@
 		NME.error = ""
 		NME.check_for_new_messages(1)
 
-/datum/computer_file/program/email_client/proc/new_mail_notify()
-	computer.visible_message("\The [computer] beeps softly, indicating a new email has been received.", 1)
-
 /datum/computer_file/program/email_client/process_tick()
 	..()
 	var/datum/nano_module/email_client/NME = NM
@@ -48,10 +47,39 @@
 	var/check_count = NME.check_for_new_messages()
 	if(check_count)
 		if(check_count == 2)
-			new_mail_notify()
+			computer.visible_message("\The [computer] beeps softly, indicating a new email has been received.", "You hear a soft bleep.")
 		ui_header = "ntnrc_new.gif"
 	else
 		ui_header = "ntnrc_idle.gif"
+
+/datum/computer_file/program/email_client/proc/update_email()
+	if(current_account)
+		current_account.connected_clients -= src
+		current_account = null
+
+	if(stored_login)
+		var/datum/computer_file/data/email_account/account
+		for(var/datum/computer_file/data/email_account/A in ntnet_global.email_accounts)
+			if(A.login == stored_login)
+				account = A
+		if(account && !account.suspended && account.password == stored_password)
+			current_account = account
+			current_account.connected_clients |= src
+
+/datum/computer_file/program/email_client/proc/mail_received(datum/computer_file/data/email_message/received_message)
+	var/open_app_link = "<a href='?src=\ref[holder.holder2];PC_runprogram=[filename];disk=\ref[holder]'>Open Email Client</a>"
+	if(program_state != PROGRAM_STATE_KILLED)
+		var/datum/nano_module/email_client/NME = NM
+		if(istype(NME))
+			open_app_link = "<a href='?src=\ref[NME];open;reply=[received_message.uid]'>Reply</a>"
+
+	// The app is not on a functioning disk, not in an MPC, or the MPC is not running
+	if(!holder?.check_functionality() || !holder.holder2?.enabled)
+		return
+
+	var/mob/living/L = get(holder.holder2, /mob/living)
+	if(L)
+		received_message.notify_mob(L, holder.holder2, open_app_link)
 
 /datum/nano_module/email_client/
 	name = "Email Client"

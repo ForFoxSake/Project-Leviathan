@@ -12,6 +12,7 @@
 	size = 12
 	available_on_ntnet = 1
 	//requires_ntnet = 1
+	usage_flags = PROGRAM_ALL_BUT_PDA
 
 /datum/nano_module/uav
 	name = "UAV Control program"

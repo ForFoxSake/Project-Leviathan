@@ -38,6 +38,7 @@
 	size = 12
 	available_on_ntnet = 1
 	requires_ntnet = 1
+	usage_flags = PROGRAM_ALL_BUT_PDA
 
 // ERT Variant of the program
 /datum/computer_file/program/camera_monitor/ert

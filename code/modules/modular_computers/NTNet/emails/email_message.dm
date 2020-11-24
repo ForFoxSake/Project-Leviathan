@@ -30,3 +30,28 @@
 /datum/computer_file/data/email_message/proc/set_timestamp()
 	timestamp = stationtime2text()
 
+/datum/computer_file/data/email_message/proc/notify_mob(mob/living/L, atom/notification_source, extra_lines)
+/*	if(issilicon(notification_source))
+		var/mob/living/silicon/S = notification_source
+		if(S.email_ringtone)
+			playsound(S, 'sound/machines/twobeep.ogg', 50, 1)
+
+	else if(istype(notification_source, /obj/item/modular_computer))
+		var/obj/item/modular_computer/computer = notification_source
+		var/datum/computer_file/program/email_client/PRG = computer.active_program
+		if (istype(PRG) && PRG.ringtone)
+			computer.visible_message("\The [host] beeps softly, indicating a new email has been received.", 1)
+			playsound(computer, 'sound/machines/twobeep.ogg', 50, 1)*/
+
+	var/list/msg = list()
+	msg += SPAN_NOTICE("New mail received from [source]:")
+	msg += "<b>Subject:</b> [title]"
+	msg += "<b>Message:</b>"
+	msg += pencode2html(stored_data)
+	if(attachment)
+		msg += "<b>Attachment:</b> [attachment.filename].[attachment.filetype] ([attachment.size]GQ)"
+	if(extra_lines)
+		msg += extra_lines
+	msg += "*--*"
+
+	to_chat(L, jointext(msg, "\n"))

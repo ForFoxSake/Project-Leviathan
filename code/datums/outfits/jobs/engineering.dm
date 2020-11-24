@@ -17,7 +17,7 @@
 	uniform = /obj/item/clothing/under/rank/chief_engineer
 	l_ear = /obj/item/device/radio/headset/heads/ce
 	id_type = /obj/item/weapon/card/id/engineering/head
-	pda_type = /obj/item/device/pda/heads/ce
+	pda_type = /obj/item/modular_computer/pda/heads/ce
 
 /decl/hierarchy/outfit/job/engineering/chief_engineer/post_equip(var/mob/living/carbon/human/H)
 	..()
@@ -34,11 +34,11 @@
 	head = /obj/item/clothing/head/hardhat
 	uniform = /obj/item/clothing/under/rank/engineer
 	id_type = /obj/item/weapon/card/id/engineering
-	pda_type = /obj/item/device/pda/engineering
+	pda_type = /obj/item/modular_computer/pda/engineering
 
 /decl/hierarchy/outfit/job/engineering/atmos
 	name = OUTFIT_JOB_NAME("Atmospheric technician")
 	uniform = /obj/item/clothing/under/rank/atmospheric_technician
 	belt = /obj/item/weapon/storage/belt/utility/atmostech
 	id_type = /obj/item/weapon/card/id/engineering
-	pda_type = /obj/item/device/pda/atmos
+	pda_type = /obj/item/modular_computer/pda/engineering

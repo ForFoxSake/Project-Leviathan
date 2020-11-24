@@ -161,16 +161,15 @@ var/list/outfits_decls_by_type_
 		return W
 
 /decl/hierarchy/outfit/proc/equip_pda(mob/living/carbon/human/H, rank, assignment)
-	return // Removing standard PDAs.
-/*	if(!pda_slot || !pda_type)
+	if(!pda_slot || !pda_type)
 		return
-	var/obj/item/device/pda/pda = new pda_type(H)
+	var/obj/item/modular_computer/pda/pda = new pda_type(H)
 	if(H.equip_to_slot_or_del(pda, pda_slot))
-		pda.owner = H.real_name
-		pda.ownjob = assignment
-		pda.ownrank = rank
+//		pda.owner = H.real_name
+//		pda.ownjob = assignment
+//		pda.ownrank = rank
 		pda.name = "PDA-[H.real_name] ([assignment])"
-		return pda*/
+		return pda
 
 /decl/hierarchy/outfit/dd_SortValue()
 	return name

@@ -10,6 +10,7 @@
 	requires_ntnet = 1
 	network_destination = "ship position sensors"
 	size = 4
+	usage_flags = PROGRAM_ALL_BUT_PDA
 
 /datum/nano_module/program/ship/nav
 	name = "Navigation Display"
