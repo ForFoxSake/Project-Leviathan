@@ -19,7 +19,12 @@
 				Account Number:
 			</div>
 			<div align="left" class="itemContent">
-				{{:data.stored_login}}&nbsp
+				{{if data.stored_login}}
+					{{:data.stored_login}}
+				{{else}}
+					---
+				{{/if}}
+				&nbsp
 			</div>
 			<div class="itemLabel">
 				Options:

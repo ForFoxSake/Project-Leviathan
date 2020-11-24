@@ -376,11 +376,11 @@
 
 	return t
 
-/obj/item/weapon/paper/proc/burnpaper(obj/item/weapon/flame/P, mob/user)
+/obj/item/weapon/paper/proc/burnpaper(obj/item/P, mob/user)
 	var/class = "warning"
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 
-	if(P.lit && !user.restrained())
+	if(!user.restrained())
 		if(istype(P, /obj/item/weapon/flame/lighter/zippo))
 			class = "rose"
 
@@ -388,19 +388,17 @@
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 		playsound(src, 'sound/bureaucracy/paperburn.ogg', 50, 1)
 
-		spawn(20)
-			if(get_dist(src, user) < 2 && user.get_active_hand() == P && P.lit)
-				user.visible_message("<span class='[class]'>[user] burns right through \the [src], turning it to ash. It flutters through the air before settling on the floor in a heap.</span>", \
-				"<span class='[class]'>You burn right through \the [src], turning it to ash. It flutters through the air before settling on the floor in a heap.</span>")
+		if(do_after(user, 20) && get_dist(src, user) < 2 && user.get_active_hand() == P && P.is_hot())
+			user.visible_message("<span class='[class]'>[user] burns right through \the [src], turning it to ash. It flutters through the air before settling on the floor in a heap.</span>", \
+			"<span class='[class]'>You burn right through \the [src], turning it to ash. It flutters through the air before settling on the floor in a heap.</span>")
 
-				if(user.get_inactive_hand() == src)
-					user.drop_from_inventory(src)
+			if(user.get_inactive_hand() == src)
+				user.drop_from_inventory(src)
 
-				new /obj/effect/decal/cleanable/ash(src.loc)
-				qdel(src)
-
-			else
-				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
+			new /obj/effect/decal/cleanable/ash(src.loc)
+			qdel(src)
+		else
+			to_chat(user, "<span class='[class]'>You must hold \the [P] steady to burn \the [src].</span>")
 
 
 /obj/item/weapon/paper/Topic(href, href_list)
@@ -491,7 +489,11 @@
 		return "paper" //Gross, but required for now.
 	return ..()
 
+// Paper autoignites at 505K. Would be nice to simulate that.
 /obj/item/weapon/paper/attackby(obj/item/weapon/P as obj, mob/user as mob)
+	if(P.is_hot())
+		burnpaper(P, user)
+		return
 	..()
 	var/clown = 0
 	if(user.mind && (user.mind.assigned_role == "Clown"))
@@ -598,9 +600,6 @@
 
 		playsound(src, 'sound/bureaucracy/stamp.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You stamp the paper with your rubber stamp.</span>")
-
-	else if(istype(P, /obj/item/weapon/flame))
-		burnpaper(P, user)
 
 	add_fingerprint(user)
 	return

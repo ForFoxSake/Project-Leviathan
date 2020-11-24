@@ -95,4 +95,4 @@
 /datum/computer_file/program/signaller/proc/receive_signal(datum/signal/signal)
 	if(signal.encryption == code)
 		for(var/mob/O in hearers(1, computer.loc))
-			O.show_message("\icon[computer] *beep* *beep*", 3, "*beep* *beep*", 2)
+			O.show_message("[bicon(computer)] *beep* *beep*", 3, "*beep* *beep*", 2)

@@ -862,6 +862,8 @@ default behaviour is:
 	// Gotta update all our flashlights to move with us.
 	for(var/obj/item/device/lighting/flashlight/F in src)
 		F.set_dir(dir)
+		if(F.spot_locked)
+			F.spot_locked = FALSE
 
 /mob/living/proc/inertial_drift()
 	if(x > 1 && x < (world.maxx) && y > 1 && y < (world.maxy))

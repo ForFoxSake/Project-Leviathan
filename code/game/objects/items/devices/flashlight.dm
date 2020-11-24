@@ -49,44 +49,40 @@
 
 	switch(light_direction)
 		if(NORTH)
-			for(var/i = 1,i <= light_spot_range, i++)
+			for(var/i = light_spot_range,i > 0, i--)
 				var/turf/T = locate(L.x,L.y + i,L.z)
-				if (lightSpotPassable(T))
-					if(T.is_space())
-						break
-					NT = T
-				else
+				if (!can_see(L,T) || T.is_space())
 					hitSomething = TRUE
+					continue
+				else
+					NT = T
 					break
 		if(SOUTH)
-			for(var/i = 1,i <= light_spot_range, i++)
+			for(var/i = light_spot_range,i > 0, i--)
 				var/turf/T = locate(L.x,L.y - i,L.z)
-				if (lightSpotPassable(T))
-					if(T.is_space())
-						break
-					NT = T
-				else
+				if (!can_see(L,T) || T.is_space())
 					hitSomething = TRUE
+					continue
+				else
+					NT = T
 					break
 		if(EAST)
-			for(var/i = 1,i <= light_spot_range, i++)
+			for(var/i = light_spot_range,i > 0, i--)
 				var/turf/T = locate(L.x + i,L.y,L.z)
-				if (lightSpotPassable(T))
-					if(T.is_space())
-						break
-					NT = T
-				else
+				if (!can_see(L,T) || T.is_space())
 					hitSomething = TRUE
+					continue
+				else
+					NT = T
 					break
 		if(WEST)
-			for(var/i = 1,i <= light_spot_range, i++)
+			for(var/i = light_spot_range,i > 0, i--)
 				var/turf/T = locate(L.x - i,L.y,L.z)
-				if (lightSpotPassable(T))
-					if(T.is_space())
-						break
-					NT = T
-				else
+				if (!can_see(L,T) || T.is_space())
 					hitSomething = TRUE
+					continue
+				else
+					NT = T
 					break
 	lightspot_hitObstacle = hitSomething
 	place_lightspot(NT)
@@ -130,16 +126,6 @@
 				if(WEST)
 					light_spot.transform = turn(light_spot.transform, -90)
 
-/obj/item/device/lighting/flashlight/proc/lightSpotPassable(var/atom/A)
-	if(!A || z != A.z)
-		return TRUE
-	if (A.opacity)
-		return FALSE
-	for(var/obj/O in A.contents)
-		if (O.opacity)
-			return FALSE
-	return TRUE
-
 /obj/item/device/lighting/flashlight/proc/lightSpotPlaceable(var/turf/T)	//check if we can place icon there, light will be still applied
 	if(T == get_turf(src) || !isfloor(T))
 		return FALSE
@@ -151,6 +137,7 @@
 /obj/item/device/lighting/flashlight/Moved(mob/user, old_loc)
 	spot_locked = FALSE
 	calculate_dir()
+	return ..()
 
 /obj/item/device/lighting/flashlight/pickup(mob/user)
 	spot_locked = FALSE
@@ -165,11 +152,6 @@
 	var/turf/T = get_turf(A)
 	if(can_see(user,T) && light_spot_range >= get_dist(get_turf(src),T))
 		lightspot_hitObstacle = FALSE
-		if (!lightSpotPassable(T))
-			lightspot_hitObstacle = TRUE
-			T = get_step_towards(T,get_turf(src))
-			if(!lightSpotPassable(T))
-				return
 		spot_locked = TRUE
 		light_direction = get_dir(src,T)
 		place_lightspot(T,Get_Angle(get_turf(src),T))
