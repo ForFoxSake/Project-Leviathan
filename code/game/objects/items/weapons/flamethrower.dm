@@ -154,18 +154,19 @@
 		return*/
 	var/throw_links = "<BR>\nAmount to throw: [throw_amount - 10 > FIREFUEL_MIN ? "<A HREF='?src=\ref[src];amount=-10'>-</A>" : "-"] [throw_amount - 5 > FIREFUEL_MIN ? "<A HREF='?src=\ref[src];amount=-5'>-</A>" : "-"] [throw_amount - 1 > FIREFUEL_MIN ? "<A HREF='?src=\ref[src];amount=-1'>-</A>" : "-"] [throw_amount] [throw_amount + 1 <= FIREFUEL_MAX ? "<A HREF='?src=\ref[src];amount=1'>+</A>" : "+"] [throw_amount + 5 <= FIREFUEL_MAX ? "<A HREF='?src=\ref[src];amount=5'>+</A>" : "+"] [throw_amount + 10 <= FIREFUEL_MAX ? "<A HREF='?src=\ref[src];amount=10'>+</A>" : "+"]"
 	var/remove_link = "<A HREF='?src=\ref[src];remove=1'>Remove fuel container</A>"
-	var/dat = text("<TT><B>Flamethrower (<A HREF='?src=\ref[src];light=1'>[lit ? "<font color='red'>Lit</font>" : "Unlit"]</a>)</B><BR>\n Fuel Level: [fueltank ? fueltank.reagents.total_volume : "0"][fueltank ? throw_links : ""]<BR>\n[fueltank ? remove_link : "No container"] - <A HREF='?src=\ref[src];close=1'>Close</A></TT>")
-	user << browse(dat, "window=flamethrower;size=600x300")
+	var/dat = text("<TT><B>(<A HREF='?src=\ref[src];light=1'>[lit ? "<font color='red'>Lit</font>" : "Unlit"]</a>)</B><BR>\n Fuel Level: [fueltank ? fueltank.reagents.total_volume : "0"][fueltank ? throw_links : ""]<BR>\n[fueltank ? remove_link : "No container"] - <A HREF='?src=\ref[src];close=1'>Close</A></TT>")
+	var/datum/browser/popup = new(user, "flamethrower", "Flamethrower", 310, 140)
+	popup.set_content(dat)
+	popup.open()
 	onclose(user, "flamethrower")
 	return
 
 
 /obj/item/weapon/flamethrower/Topic(href,href_list[])
-	if(href_list["close"])
+	if(href_list["close"] || usr.stat || usr.restrained() || usr.lying || (get_dist(src, usr) > 1))
 		usr.unset_machine()
 		usr << browse(null, "window=flamethrower")
 		return
-	if(usr.stat || usr.restrained() || usr.lying)	return
 	usr.set_machine(src)
 	if(href_list["light"])
 		if(!status)	return

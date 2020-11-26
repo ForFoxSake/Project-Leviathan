@@ -62,12 +62,12 @@
 		. += "It has a purchase of [transaction_amount] pending[transaction_purpose ? " for [transaction_purpose]" : ""]."
 
 /obj/item/device/retail_scanner/interact(mob/user as mob)
-	var/dat = "<h2>Retail Scanner<hr></h2>"
+	var/dat
 	if (locked)
-		dat += "<a href='?src=\ref[src];choice=toggle_lock'>Unlock</a><br>"
+		dat = "<a href='?src=\ref[src];choice=toggle_lock'>Unlock</a><br>"
 		dat += "Linked account: <b>[linked_account ? linked_account.owner_name : "None"]</b><br>"
 	else
-		dat += "<a href='?src=\ref[src];choice=toggle_lock'>Lock</a><br>"
+		dat = "<a href='?src=\ref[src];choice=toggle_lock'>Lock</a><br>"
 		dat += "Linked account: <a href='?src=\ref[src];choice=link_account'>[linked_account ? linked_account.owner_name : "None"]</a><br>"
 	dat += "<a href='?src=\ref[src];choice=custom_order'>Custom Order</a><hr>"
 
@@ -82,7 +82,9 @@
 		dat += locked ? "<br>" : "<a href='?src=\ref[src];choice=reset_log'>Reset Log</a><br>"
 		dat += "<br>"
 	dat += "<i>Device ID:</i> [machine_id]"
-	user << browse(dat, "window=retail;size=350x500")
+	var/datum/browser/popup = new(user, "retail", "Retail Scanner", 350, 500)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "retail")
 
 
@@ -333,7 +335,7 @@
 	var/item_name
 	for(var/i=1, i<=item_list.len, i++)
 		item_name = item_list[i]
-		dat += "<tr><td class=\"tx-name-r\">[item_list[item_name] ? "<a href='?src=\ref[src];choice=subtract;item=\ref[item_name]'>-</a> <a href='?src=\ref[src];choice=set_amount;item=\ref[item_name]'>Set</a> <a href='?src=\ref[src];choice=add;item=\ref[item_name]'>+</a> [item_list[item_name]] x " : ""][item_name] <a href='?src=\ref[src];choice=clear;item=\ref[item_name]'>Remove</a></td><td class=\"tx-data-r\" width=50>[price_list[item_name] * item_list[item_name]] &thorn</td></tr>"
+		dat += "<tr><td class=\"tx-name-r\">[item_list[item_name] ? "<a href='?src=\ref[src];choice=subtract;item=\ref[item_name]'>-</a> <a href='?src=\ref[src];choice=set_amount;item=\ref[item_name]'>Set</a> <a href='?src=\ref[src];choice=add;item=\ref[item_name]'>+</a> [item_list[item_name]] x " : ""][item_name] <a href='?src=\ref[src];choice=clear;item=\ref[item_name]'>Remove</a></td><td class=\"tx-data-r\" width=50>[price_list[item_name]] &thorn</td></tr>"
 	dat += "</table><table width=300>"
 	dat += "<tr><td class=\"tx-name-r\"><a href='?src=\ref[src];choice=clear'>Clear Entry</a></td><td class=\"tx-name-r\" style='text-align: right'><b>Total Amount: [transaction_amount] &thorn</b></td></tr>"
 	dat += "</table></html>"

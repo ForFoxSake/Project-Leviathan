@@ -91,7 +91,7 @@
 	if(stat & BROKEN)
 		return
 	user.set_machine(src)
-	var/dat = "<TITLE>Biogenerator</TITLE>Biogenerator:<BR>"
+	var/dat = ""
 	if(processing)
 		dat += "<FONT COLOR=red>Biogenerator is processing! Please wait...</FONT>"
 	else
@@ -143,7 +143,9 @@
 			if("void")
 				dat += "<FONT COLOR=red>Error: No growns inside.</FONT><BR>Please, put growns into reactor.<BR>"
 				dat += "<A href='?src=\ref[src];action=menu'>Return to menu</A>"
-	user << browse(dat, "window=biogenerator")
+	var/datum/browser/popup = new(user, "biogenerator", "Biogenerator", 300, 400)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "biogenerator")
 	return
 

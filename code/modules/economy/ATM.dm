@@ -130,8 +130,7 @@ log transactions
 	if(get_dist(src,user) <= 1)
 
 		//js replicated from obj/machinery/computer/card
-		var/dat = "<h1>Automatic Teller Machine</h1>"
-		dat += "For all your monetary needs!<br>"
+		var/dat = "For all your monetary needs!<br>"
 		dat += "<i>This terminal is</i> [machine_id]. <i>Report this code when contacting IT Support</i><br/>"
 
 		if(emagged > 0)
@@ -217,7 +216,10 @@ log transactions
 				dat += "<input type='submit' value='Submit'><br>"
 				dat += "</form>"
 
-		user << browse(dat,"window=atm;size=550x650")
+		var/datum/browser/popup = new(user, "atm", "Automatic Teller Machine", 550, 650)
+		popup.set_content(jointext(dat,null))
+		popup.open()
+		onclose(user, "atm")
 	else
 		user << browse(null,"window=atm")
 

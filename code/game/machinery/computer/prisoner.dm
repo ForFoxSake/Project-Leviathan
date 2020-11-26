@@ -24,7 +24,6 @@
 			return
 		user.set_machine(src)
 		var/dat
-		dat += "<B>Prisoner Implant Manager System</B><BR>"
 		if(screen == 0)
 			dat += "<HR><A href='?src=\ref[src];lock=1'>Unlock Console</A>"
 		else if(screen == 1)
@@ -56,7 +55,9 @@
 				dat += "********************************<BR>"
 			dat += "<HR><A href='?src=\ref[src];lock=1'>Lock Console</A>"
 
-		user << browse(dat, "window=computer;size=400x500")
+		var/datum/browser/popup = new(user, "computer", "Prisoner Implant Manager System", 400, 500)
+		popup.set_content(jointext(dat,null))
+		popup.open()
 		onclose(user, "computer")
 		return
 

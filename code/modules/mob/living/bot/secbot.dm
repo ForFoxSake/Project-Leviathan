@@ -111,6 +111,9 @@
 	if(..())
 		return
 
+	if ((usr.stat || usr.restrained()) || (get_dist(src, usr) > 1))
+		return
+
 	usr.set_machine(src)
 	add_fingerprint(usr)
 

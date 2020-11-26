@@ -153,7 +153,9 @@
 			<B>Flow rate: </B>[round(last_flow_rate, 0.1)]L/s
 			"}
 
-	user << browse("<HEAD><TITLE>[src.name] control</TITLE></HEAD><TT>[dat]</TT>", "window=atmos_filter")
+	var/datum/browser/popup = new(user, "atmos_filter", "[src.name] Control", 380, 360)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "atmos_filter")
 	return
 

@@ -213,7 +213,8 @@
 		suit = w_uniform
 
 	user.set_machine(src)
-	var/dat = "<B><HR><FONT size=3>[name]</FONT></B><BR><HR>"
+	//var/dat = "<B><HR><FONT size=3>[name]</FONT></B><BR><HR>"
+	var/dat = "<HR>"
 
 	for(var/entry in species.hud.gear)
 		var/list/slot_ref = species.hud.gear[entry]
@@ -248,7 +249,9 @@
 	dat += "<BR><A href='?src=\ref[user];refresh=1'>Refresh</A>"
 	dat += "<BR><A href='?src=\ref[user];mach_close=mob[name]'>Close</A>"
 
-	user << browse(dat, text("window=mob[name];size=340x540"))
+	var/datum/browser/popup = new(user, "mob[name]", "[name]", 340, 540)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "mob[name]")
 	return
 

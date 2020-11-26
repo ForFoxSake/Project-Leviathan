@@ -249,11 +249,13 @@
 		else
 			dat = {"<b>Ingredients:</b><br>[dat]"}
 		dat += {"<HR><BR>\
-<A href='?src=\ref[src];action=cook'>Turn on!<BR>\
-<A href='?src=\ref[src];action=dispose'>Eject ingredients!<BR>\
+<A href='?src=\ref[src];action=cook'>Turn on!</A><BR>\
+<A href='?src=\ref[src];action=dispose'>Eject ingredients!</A><BR>\
 "}
 
-	user << browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave")
+	var/datum/browser/popup = new(user, "microwave", "Microwave Controls", 400, 300)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "microwave")
 	return
 

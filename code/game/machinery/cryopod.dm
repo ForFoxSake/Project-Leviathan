@@ -16,6 +16,7 @@
 	circuit = /obj/item/weapon/circuitboard/cryopodcontrol
 	density = 0
 	interact_offline = 1
+	req_access = list(access_all_personal_lockers)
 	var/mode = null
 
 	//Used for logging people entering cryosleep and important items they are carrying.
@@ -89,20 +90,22 @@
 	if(!(ticker))
 		return
 
-	dat += "<hr/><br/><b>[storage_name]</b><br/>"
 	dat += "<i>Welcome, [user.real_name].</i><br/><br/><hr/>"
-	dat += "<a href='?src=\ref[src];log=1'>View storage log</a>.<br>"
+	dat += "<a href='?src=\ref[src];log=1'>View storage log</a><br>"
 	if(allow_items)
-		dat += "<a href='?src=\ref[src];view=1'>View objects</a>.<br>"
-		//dat += "<a href='?src=\ref[src];item=1'>Recover object</a>.<br>" //VOREStation Removal - Just log them.
-		//dat += "<a href='?src=\ref[src];allitems=1'>Recover all objects</a>.<br>" //VOREStation Removal
+		dat += "<a href='?src=\ref[src];view=1'>View objects</a><br>"
+		if(allowed(user))
+			//dat += "<a href='?src=\ref[src];item=1'>Recover object</a>.<br>" //VOREStation Removal - Just log them.
+			dat += "<a href='?src=\ref[src];allitems=1'>Recover all objects</a><br>" //VOREStation Removal // Project Leviathan Reintroduction
 
-	user << browse(dat, "window=cryopod_console")
+	var/datum/browser/popup = new(user, "cryopod_console", storage_name, 400, 500, src)
+	popup.set_content(jointext(dat,null))
+	popup.open()
 	onclose(user, "cryopod_console")
 
 /obj/machinery/computer/cryopod/Topic(href, href_list)
-
 	if(..())
+		usr << browse(null, "window=cryopod_console")
 		return
 
 	var/mob/user = usr
@@ -116,28 +119,36 @@
 			dat += "[person]<br/>"
 		dat += "<hr/>"
 
-		user << browse(dat, "window=cryolog")
+		var/datum/browser/popup = new(user, "cryopod_log", storage_name, 400, 500, src)
+		popup.set_content(jointext(dat,null))
+		popup.open()
+		onclose(user, "cryopod_log")
 
 	if(href_list["view"])
 		if(!allow_items) return
 
 		var/dat = "<b>Recently stored objects</b><br/><hr/><br/>"
-		//VOREStation Edit Start
-		for(var/I in frozen_items)
-			dat += "[I]<br/>"
-		//VOREStation Edit End
+		if(allowed(user))
+			for(var/I in frozen_items)
+				dat += "<a href='?src=\ref[src];item=\ref[I]'>[I]</a><br/>"
+		else
+			for(var/I in frozen_items)
+				dat += "[I]<br/>"
 		dat += "<hr/>"
 
-		user << browse(dat, "window=cryoitems")
+		var/datum/browser/popup = new(user, "cryopod_items", storage_name, 400, 500, src)
+		popup.set_content(jointext(dat,null))
+		popup.open()
+		onclose(user, "cryopod_items")
 
 	else if(href_list["item"])
-		if(!allow_items) return
+		if(!allow_items || !allowed(user)) return
 
 		if(frozen_items.len == 0)
 			to_chat(user, "<span class='notice'>There is nothing to recover from storage.</span>")
 			return
 
-		var/obj/item/I = input(usr, "Please choose which object to retrieve.","Object recovery",null) as null|anything in frozen_items
+		var/obj/item/I = locate(href_list["item"]) as obj
 		if(!I)
 			return
 
@@ -147,11 +158,11 @@
 
 		visible_message("<span class='notice'>The console beeps happily as it disgorges \the [I].</span>", 3)
 
-		I.forceMove(get_turf(src))
+		user.put_in_hands(I)
 		frozen_items -= I
 
 	else if(href_list["allitems"])
-		if(!allow_items) return
+		if(!allow_items || !allowed(user)) return
 
 		if(frozen_items.len == 0)
 			to_chat(user, "<span class='notice'>There is nothing to recover from storage.</span>")

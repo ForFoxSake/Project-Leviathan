@@ -12,6 +12,8 @@
 	icon_override = 'icons/leviathan/accessory_pl.dmi'
 	overlay_state = ""
 
+	on_rolled = list("down" = "none")
+
 /obj/item/clothing/accessory/pip/cmd
 	name = "Command Pips"
 	desc = "These pips denote that the wearer is an officer."
@@ -36,6 +38,8 @@
 
 	icon_override = 'icons/leviathan/accessory_pl.dmi'
 	overlay_state = ""
+
+	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/sribbon/pheart
 	name = "Purple Heart"
