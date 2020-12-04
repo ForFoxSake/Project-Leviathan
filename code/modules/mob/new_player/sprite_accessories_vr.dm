@@ -717,7 +717,7 @@
 		name = "Shaggy mane/feathers"
 		icon_state = "shaggy"
 		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO)
+		body_parts = list(BP_L_ARM,BP_R_ARM,BP_GROIN,BP_TORSO)
 
 	jagged_teeth
 		name = "Jagged teeth"
