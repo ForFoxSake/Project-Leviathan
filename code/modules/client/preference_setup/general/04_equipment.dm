@@ -20,6 +20,14 @@
 	S["pdachoice"]	<< pref.pdachoice
 	S["communicator_visibility"]	<< pref.communicator_visibility
 
+/datum/category_item/player_setup_item/general/equipment/export_character()
+	var/list/data = list()
+	data["all_underwear"]			= pref.all_underwear
+	data["all_underwear_metadata"]	= pref.all_underwear_metadata
+	data["backbag"]					= pref.backbag
+	data["communicator_visibility"]	= pref.communicator_visibility
+	return data
+
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/general/equipment/copy_to_mob(var/mob/living/carbon/human/character)
 	character.all_underwear.Cut()

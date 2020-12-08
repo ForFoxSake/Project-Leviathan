@@ -78,6 +78,42 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
 
+/datum/category_item/player_setup_item/general/body/export_character()
+	var/list/data = list()
+	data["species"]			= pref.species
+	data["hair_red"]			= pref.r_hair
+	data["hair_green"]			= pref.g_hair
+	data["hair_blue"]			= pref.b_hair
+	data["grad_red"]			= pref.r_grad
+	data["grad_green"]			= pref.g_grad
+	data["grad_blue"]			= pref.b_grad
+	data["facial_red"]			= pref.r_facial
+	data["facial_green"]		= pref.g_facial
+	data["facial_blue"]		= pref.b_facial
+	data["skin_tone"]			= pref.s_tone
+	data["skin_red"]			= pref.r_skin
+	data["skin_green"]			= pref.g_skin
+	data["skin_blue"]			= pref.b_skin
+	data["hair_style_name"]	= pref.h_style
+	data["facial_style_name"]	= pref.f_style
+	data["grad_style_name"]	= pref.grad_style
+	data["eyes_red"]			= pref.r_eyes
+	data["eyes_green"]			= pref.g_eyes
+	data["eyes_blue"]			= pref.b_eyes
+	data["b_type"]				= pref.b_type
+	data["disabilities"]		= pref.disabilities
+	data["organ_data"]			= pref.organ_data
+	data["rlimb_data"]			= pref.rlimb_data
+	data["body_markings"]		= pref.body_markings
+	data["synth_color"]		= pref.synth_color
+	data["synth_red"]			= pref.r_synth
+	data["synth_green"]		= pref.g_synth
+	data["synth_blue"]			= pref.b_synth
+	data["synth_markings"]		= pref.synth_markings
+	data["bgstate"]			= pref.bgstate
+	data["body_descriptors"]	= pref.body_descriptors
+	return data
+
 /datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
 	if(!pref.species || !(pref.species in GLOB.playable_species))
 		pref.species = SPECIES_HUMAN

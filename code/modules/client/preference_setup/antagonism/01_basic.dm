@@ -16,6 +16,14 @@ var/global/list/uplink_locations = list("PDA", "Headset", "None")
 	S["antag_faction"]	<< pref.antag_faction
 	S["antag_vis"]		<< pref.antag_vis
 
+/datum/category_item/player_setup_item/antagonism/basic/export_character()
+	var/list/data = list()
+	data["uplinklocation"]	= pref.uplinklocation
+	data["exploit_record"]	= pref.exploit_record
+	data["antag_faction"]	= pref.antag_faction
+	data["antag_vis"]		= pref.antag_vis
+	return data
+
 /datum/category_item/player_setup_item/antagonism/basic/sanitize_character()
 	pref.uplinklocation	= sanitize_inlist(pref.uplinklocation, uplink_locations, initial(pref.uplinklocation))
 	if(!pref.antag_faction) pref.antag_faction = "None"

@@ -33,6 +33,23 @@
 	for(var/module in robot_module_types)
 		S["flavour_texts_robot_[module]"] << pref.flavour_texts_robot[module]
 
+/datum/category_item/player_setup_item/general/flavor/export_character()
+	var/list/data = list()
+	data["flavor_texts_general"]	= pref.flavor_texts["general"]
+	data["flavor_texts_head"]		= pref.flavor_texts["head"]
+	data["flavor_texts_face"]		= pref.flavor_texts["face"]
+	data["flavor_texts_eyes"]		= pref.flavor_texts["eyes"]
+	data["flavor_texts_torso"]		= pref.flavor_texts["torso"]
+	data["flavor_texts_arms"]		= pref.flavor_texts["arms"]
+	data["flavor_texts_hands"]		= pref.flavor_texts["hands"]
+	data["flavor_texts_legs"]		= pref.flavor_texts["legs"]
+	data["flavor_texts_feet"]		= pref.flavor_texts["feet"]
+
+	data["flavour_texts_robot_Default"] = pref.flavour_texts_robot["Default"]
+	for(var/module in robot_module_types)
+		data["flavour_texts_robot_[module]"] = pref.flavour_texts_robot[module]
+	return data
+
 /datum/category_item/player_setup_item/general/flavor/sanitize_character()
 	return
 

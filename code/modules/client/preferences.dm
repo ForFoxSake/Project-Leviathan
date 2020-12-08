@@ -244,8 +244,8 @@ datum/preferences
 		dat += "<a href='?src=\ref[src];save=1'>Save slot</a> - "
 		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a> - "
 		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
-		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a>"
-
+		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a> - "
+		dat += "<a href='?src=\ref[src];export=1'>Export slot</a>"
 	else
 		dat += "Please create an account to save your preferences."
 
@@ -345,6 +345,9 @@ datum/preferences
 		if(!IsGuestKey(usr.key))
 			open_copy_dialog(usr)
 			return 1
+	else if(href_list["export"])
+		input(usr,"This box contains your character data as text. Changes will not be saved.","Character Export",html_decode(json_encode(player_setup.export_character()))) as message
+		return 1
 	else if(href_list["overwrite"])
 		overwrite_character(text2num(href_list["overwrite"]))
 		sanitize_preferences()

@@ -67,6 +67,14 @@
 	for(var/datum/category_group/player_setup_category/PS in categories)
 		PS.save_character(S)
 
+/datum/category_collection/player_setup_collection/proc/export_character()
+	var/list/data = list()
+	for(var/datum/category_group/player_setup_category/PS in categories)
+		var/cat_data = PS.export_character()
+		if(cat_data)
+			data += cat_data
+	return data
+
 /datum/category_collection/player_setup_collection/proc/load_preferences(var/savefile/S)
 	for(var/datum/category_group/player_setup_category/PS in categories)
 		PS.load_preferences(S)
@@ -136,6 +144,14 @@
 	for(var/datum/category_item/player_setup_item/PI in items)
 		PI.save_character(S)
 
+/datum/category_group/player_setup_category/proc/export_character()
+	var/list/data = list()
+	for(var/datum/category_item/player_setup_item/PI in items)
+		var/item_data = PI.export_character()
+		if(item_data)
+			data += item_data
+	return data
+
 /datum/category_group/player_setup_category/proc/load_preferences(var/savefile/S)
 	for(var/datum/category_item/player_setup_item/PI in items)
 		PI.load_preferences(S)
@@ -195,6 +211,12 @@
 */
 /datum/category_item/player_setup_item/proc/save_character(var/savefile/S)
 	return
+
+/*
+* Called when the item is asked to send the character's data to the user.
+*/
+/datum/category_item/player_setup_item/proc/export_character()
+	return null
 
 /*
 * Called when the item is asked to load user/global settings

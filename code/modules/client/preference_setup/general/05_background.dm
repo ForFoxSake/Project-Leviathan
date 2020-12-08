@@ -22,6 +22,18 @@
 	S["religion"]				<< pref.religion
 	S["economic_status"]		<< pref.economic_status
 
+/datum/category_item/player_setup_item/general/background/export_character()
+	var/list/data = list()
+	data["med_record"]		= pref.med_record
+	data["sec_record"]		= pref.sec_record
+	data["gen_record"]		= pref.gen_record
+	data["home_system"]		= pref.home_system
+	data["citizenship"]		= pref.citizenship
+	data["faction"]			= pref.faction
+	data["religion"]		= pref.religion
+	data["economic_status"]	= pref.economic_status
+	return data
+
 /datum/category_item/player_setup_item/general/background/sanitize_character()
 	if(!pref.home_system) pref.home_system = "Unset"
 	if(!pref.citizenship) pref.citizenship = "None"

@@ -60,6 +60,14 @@ var/list/gear_datums = list()
 	to_file(S["gear_list"], pref.gear_list)
 	to_file(S["gear_slot"], pref.gear_slot)
 
+/datum/category_item/player_setup_item/loadout/export_character()
+	var/list/temp_gear = pref.gear_list.Copy()
+	temp_gear["[pref.gear_slot]"] = pref.gear
+	var/list/data = list()
+	data["gear_list"] = temp_gear
+	data["gear_slot"] = pref.gear_slot
+	return data
+
 /datum/category_item/player_setup_item/loadout/proc/valid_gear_choices(var/max_cost)
 	. = list()
 	var/mob/preference_mob = preference_mob()

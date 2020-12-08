@@ -11,6 +11,12 @@
 	S["language"]			<< pref.alternate_languages
 	S["language_prefixes"]	<< pref.language_prefixes
 
+/datum/category_item/player_setup_item/general/language/export_character()
+	var/list/data = list()
+	data["language"]			= pref.alternate_languages
+	data["language_prefixes"]	= pref.language_prefixes
+	return data
+
 /datum/category_item/player_setup_item/general/language/sanitize_character()
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
 	if(pref.species)

@@ -30,6 +30,18 @@ datum/preferences/proc/set_biological_gender(var/gender)
 	S["spawnpoint"]				<< pref.spawnpoint
 	S["OOC_Notes"]				<< pref.metadata
 
+/datum/category_item/player_setup_item/general/basic/export_character()
+	var/list/data = list()
+	data["real_name"]				= pref.real_name
+	data["nickname"]				= pref.nickname
+	data["name_is_always_random"]	= pref.be_random_name
+	data["gender"]					= pref.biological_gender
+	data["id_gender"]				= pref.identifying_gender
+	data["age"]						= pref.age
+	data["spawnpoint"]				= pref.spawnpoint
+	data["OOC_Notes"]				= pref.metadata
+	return data
+
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))
 	pref.biological_gender  = sanitize_inlist(pref.biological_gender, get_genders(), pick(get_genders()))
