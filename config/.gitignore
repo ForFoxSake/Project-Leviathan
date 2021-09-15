@@ -1,2 +1,2 @@
 #ignore the textfiles here and not in subdirectories.
-*.txt
+/*.txt
