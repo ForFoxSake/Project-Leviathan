@@ -1,4 +1,4 @@
-/obj/item/projectile/bullet/pistol/rubber/strong //"rubber" bullets for revolvers and matebas
+/obj/item/projectile/bullet/rubber/r357 //"rubber" bullets for revolvers and matebas
 	damage = 10
 	agony = 60
 	embed_chance = 0

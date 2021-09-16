@@ -26,7 +26,7 @@
 /obj/item/ammo_casing/a357
 	desc = "A .357 bullet casing."
 	caliber = ".357"
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	projectile_type = /obj/item/projectile/bullet/r357
 	matter = list(DEFAULT_WALL_MATERIAL = 210)
 	max_held = 8
 
@@ -37,14 +37,14 @@
 /obj/item/ammo_casing/a38
 	desc = "A .38 bullet casing."
 	caliber = ".38"
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 	max_held = 8
 
 /obj/item/ammo_casing/a38/rubber
 	desc = "A .38 rubber bullet casing."
 	icon_state = "r-casing"
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	projectile_type = /obj/item/projectile/bullet/rubber/r9mm
 
 /obj/item/ammo_casing/a38/emp
 	name = ".38 haywire round"
@@ -60,14 +60,14 @@
 /obj/item/ammo_casing/a44
 	desc = "A .44 bullet casing."
 	caliber = ".44"
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	projectile_type = /obj/item/projectile/bullet/r357
 	matter = list(DEFAULT_WALL_MATERIAL = 210)
 	max_held = 6
 
 /obj/item/ammo_casing/a44/rubber
 	icon_state = "r-casing"
 	desc = "A .44 rubber bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
+	projectile_type = /obj/item/projectile/bullet/rubber/r357
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 
 /obj/item/ammo_casing/a44/rifle
@@ -93,18 +93,18 @@
 /obj/item/ammo_casing/a9mm
 	desc = "A 9mm bullet casing."
 	caliber = "9mm"
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 	max_held = 10
 
 /obj/item/ammo_casing/a9mm/ap
 	desc = "A 9mm armor-piercing bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/ap
+	projectile_type = /obj/item/projectile/bullet/r9mm/ap
 	matter = list(DEFAULT_WALL_MATERIAL = 80)
 
 /obj/item/ammo_casing/a9mm/hp
 	desc = "A 9mm hollow-point bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/hp
+	projectile_type = /obj/item/projectile/bullet/r9mm/hp
 
 
 /obj/item/ammo_casing/a9mm/flash
@@ -115,7 +115,7 @@
 /obj/item/ammo_casing/a9mm/rubber
 	desc = "A 9mm rubber bullet casing."
 	icon_state = "r-casing"
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	projectile_type = /obj/item/projectile/bullet/rubber/r9mm
 
 /obj/item/ammo_casing/a9mm/practice
 	desc = "A 9mm practice bullet casing."
@@ -129,14 +129,14 @@
 /obj/item/ammo_casing/a45
 	desc = "A .45 bullet casing."
 	caliber = ".45"
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 	matter = list(DEFAULT_WALL_MATERIAL = 75)
 	max_held = 10
 
 /obj/item/ammo_casing/a45/ap
 	desc = "A .45 Armor-Piercing bullet casing."
 	icon_state = "r-casing"
-	projectile_type = /obj/item/projectile/bullet/pistol/medium/ap
+	projectile_type = /obj/item/projectile/bullet/r45/ap
 
 /obj/item/ammo_casing/a45/practice
 	desc = "A .45 practice bullet casing."
@@ -147,7 +147,7 @@
 /obj/item/ammo_casing/a45/rubber
 	desc = "A .45 rubber bullet casing."
 	icon_state = "r-casing"
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	projectile_type = /obj/item/projectile/bullet/rubber/r9mm
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 
 /obj/item/ammo_casing/a45/flash
@@ -165,7 +165,7 @@
 
 /obj/item/ammo_casing/a45/hp
 	desc = "A .45 hollow-point bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/medium/hp
+	projectile_type = /obj/item/projectile/bullet/r45/hp
 
 /*
  * 10mm
@@ -174,7 +174,7 @@
 /obj/item/ammo_casing/a10mm
 	desc = "A 10mm bullet casing."
 	caliber = "10mm"
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 	matter = list(DEFAULT_WALL_MATERIAL = 75)
 	max_held = 10
 
@@ -354,7 +354,7 @@
 	desc = "A 5mm solid phoron caseless round."
 	caliber = "5mm caseless"
 	icon_state = "casing" // Placeholder. Should probably be purple.
-	projectile_type = /obj/item/projectile/bullet/pistol // Close enough to be comparable.
+	projectile_type = /obj/item/projectile/bullet/r9mm // Close enough to be comparable.
 	matter = list(DEFAULT_WALL_MATERIAL = 180)
 	caseless = 1
 	max_held = 8
@@ -381,7 +381,7 @@
 	caliber = "caps"
 	icon_state = "r-casing"
 	color = "#FF0000"
-	projectile_type = /obj/item/projectile/bullet/pistol/cap
+	projectile_type = /obj/item/projectile/bullet/r9mm/cap
 	matter = list(DEFAULT_WALL_MATERIAL = 85)
 	max_held = 24
 

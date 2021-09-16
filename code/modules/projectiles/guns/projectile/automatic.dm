@@ -4,7 +4,7 @@
 	icon_state = "c05r"	//Used because it's not used anywhere else
 	load_method = SPEEDLOADER
 	ammo_type = /obj/item/ammo_casing/a9mm
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 
 //Burst is the number of bullets fired; Fire delay is the time you have to wait to shoot the gun again, Move delay is the same but for moving after shooting. .
 //Burst accuracy is the accuracy of each bullet fired in the burst. Dispersion is how much the bullets will 'spread' away from where you aimed.
@@ -53,7 +53,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m10mm)
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
@@ -120,7 +120,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 
 /obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
 	..()

@@ -10,7 +10,7 @@
 	w_class = ITEMSIZE_NORMAL
 	matter = list(DEFAULT_WALL_MATERIAL = 1000)
 	recoil = 1
-	projectile_type = /obj/item/projectile/bullet/pistol/strong	//Only used for chameleon guns
+	projectile_type = /obj/item/projectile/bullet/r357	//Only used for chameleon guns
 
 	var/caliber = ".357"		//determines which casings will fit
 	var/handle_casings = EJECT_CASINGS	//determines how spent casings should be handled

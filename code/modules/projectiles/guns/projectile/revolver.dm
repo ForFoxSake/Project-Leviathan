@@ -12,7 +12,7 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	ammo_type = /obj/item/ammo_casing/a357
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	projectile_type = /obj/item/projectile/bullet/r357
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 
 /obj/item/weapon/gun/projectile/revolver/verb/spin_cylinder()
@@ -158,7 +158,7 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	handle_casings = CYCLE_CASINGS
 	max_shells = 7
 	ammo_type = /obj/item/ammo_casing/cap
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	projectile_type = /obj/item/projectile/bullet/r357
 
 /obj/item/weapon/gun/projectile/revolver/judge
 	name = "\"The Judge\""
@@ -189,7 +189,7 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	max_shells = 9
 	caliber = ".38"
 	ammo_type = /obj/item/ammo_casing/a38
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 	var/secondary_max_shells = 1
 	var/secondary_caliber = "12g"
 	var/secondary_ammo_type = /obj/item/ammo_casing/a12g

@@ -148,7 +148,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged
 	icon_state = "syndicateranged"
 	icon_living = "syndicateranged"
-	projectiletype = /obj/item/projectile/bullet/pistol/medium
+	projectiletype = /obj/item/projectile/bullet/r45
 //	casingtype = /obj/item/ammo_casing/spent	//Makes infinite stacks of bullets when put in PoIs.
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 	loot_list = list(/obj/item/weapon/gun/projectile/colt = 100)

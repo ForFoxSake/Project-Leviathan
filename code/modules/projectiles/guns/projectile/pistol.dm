@@ -4,7 +4,7 @@
 	desc = "A typical modern handgun produced for law enforcement. Uses .45 rounds."
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 	icon_state = "colt"
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
@@ -83,7 +83,7 @@
 	icon_state = "secguncomp"
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
@@ -124,7 +124,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
-	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	projectile_type = /obj/item/projectile/bullet/r45
 
 /obj/item/weapon/gun/projectile/silenced/empty
 	magazine_type = null
@@ -195,7 +195,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm/compact)
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 
 /obj/item/weapon/gun/projectile/pistol/flash
 	name = "compact signal pistol"
@@ -288,7 +288,7 @@
 	load_method = SINGLE_CASING
 	max_shells = 2
 	ammo_type = /obj/item/ammo_casing/a357
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	projectile_type = /obj/item/projectile/bullet/r357
 
 /obj/item/weapon/gun/projectile/luger
 	name = "\improper Jindal T15 Chooha"
@@ -303,7 +303,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm/compact)
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 
 /obj/item/weapon/gun/projectile/luger/update_icon()
 	..()

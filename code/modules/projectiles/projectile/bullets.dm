@@ -64,52 +64,57 @@
 
 	return 0
 
-/* short-casing projectiles, like the kind used in pistols or SMGs */
-
-/obj/item/projectile/bullet/pistol // 9mm pistols and most SMGs. Sacrifice power for capacity.
-	fire_sound = 'sound/weapons/gunshot2.ogg'
-	damage = 20
-
-/obj/item/projectile/bullet/pistol/ap
-	damage = 15
-	armor_penetration = 30
-
-/obj/item/projectile/bullet/pistol/hp
-	damage = 25
-	armor_penetration = -50
-
-/obj/item/projectile/bullet/pistol/medium // .45 (and maybe .40 if it ever gets added) caliber security pistols. Balance between capacity and power.
-	fire_sound = 'sound/weapons/gunshot3.ogg' // Snappier sound.
-	damage = 25
-
-/obj/item/projectile/bullet/pistol/medium/ap
-	damage = 20
-	armor_penetration = 15
-
-/obj/item/projectile/bullet/pistol/medium/hp
-	damage = 30
-	armor_penetration = -50
-
-/obj/item/projectile/bullet/pistol/strong // .357 and .44 caliber stuff. High power pistols like the Mateba or Desert Eagle. Sacrifice capacity for power.
-	fire_sound = 'sound/weapons/gunshot4.ogg'
-	damage = 60
-
-/obj/item/projectile/bullet/pistol/rubber/strong // "Rubber" bullets for high power pistols.
-	fire_sound = 'sound/weapons/gunshot3.ogg' // Rubber shots have less powder, but these still have more punch than normal rubber shot.
-	damage = 10
-	agony = 60
-	embed_chance = 0
-	sharp = 0
-	check_armour = "melee"
-
-/obj/item/projectile/bullet/pistol/rubber // "Rubber" bullets for all other pistols.
+/* proto bullet types. Rubber, stun, etc */
+/obj/item/projectile/bullet/rubber
 	name = "rubber bullet"
-	damage = 5
-	agony = 40
+	damage = 3
+	agony = 20
 	embed_chance = 0
 	sharp = 0
 	check_armour = "melee"
 	fire_sound ='sound/weapons/Gunshot_pathetic.ogg' // Rubber shots have less powder in the casing.
+	SA_vulnerability = SA_ANIMAL // Makes animals take 50% agony damage.
+
+/* short-casing projectiles, like the kind used in pistols or SMGs */
+
+/obj/item/projectile/bullet/r9mm // 9mm pistols and most SMGs. Sacrifice power for capacity.
+	fire_sound = 'sound/weapons/gunshot2.ogg'
+	damage = 20
+	agony = 20
+
+/obj/item/projectile/bullet/r9mm/ap
+	damage = 15
+	armor_penetration = 30
+
+/obj/item/projectile/bullet/r9mm/hp
+	damage = 25
+	armor_penetration = -50
+
+/obj/item/projectile/bullet/r45 // .45 (and maybe .40 if it ever gets added) caliber security pistols. Balance between capacity and power.
+	fire_sound = 'sound/weapons/gunshot3.ogg' // Snappier sound.
+	damage = 25
+
+/obj/item/projectile/bullet/r45/ap
+	damage = 20
+	armor_penetration = 15
+
+/obj/item/projectile/bullet/r45/hp
+	damage = 30
+	armor_penetration = -50
+
+/obj/item/projectile/bullet/r357 // .357 and .44 caliber stuff. High power pistols like the Mateba or Desert Eagle. Sacrifice capacity for power.
+	fire_sound = 'sound/weapons/gunshot4.ogg'
+	damage = 50
+	agony = 30
+
+/obj/item/projectile/bullet/rubber/r357 // "Rubber" bullets for high power pistols.
+	fire_sound = 'sound/weapons/gunshot3.ogg' // Rubber shots have less powder, but these still have more punch than normal rubber shot.
+	damage = 10
+	agony = 60
+
+/obj/item/projectile/bullet/rubber/r9mm // "Rubber" bullets for all other pistols.
+	damage = 5
+	agony = 40
 
 /* shotgun projectiles */
 
@@ -117,6 +122,7 @@
 	name = "slug"
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
 	damage = 50
+	agony = 40
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
@@ -139,6 +145,7 @@
 
 /obj/item/projectile/bullet/pellet/shotgun/flak
 	damage = 2 //The main weapon using these fires four at a time, usually with different destinations. Usually.
+	agony = 0
 	range_step = 2
 	spread_step = 30
 	armor_penetration = 10
@@ -148,6 +155,7 @@
 	name = "ion slug"
 	fire_sound = 'sound/weapons/Laser.ogg' // Really? We got nothing better than this?
 	damage = 15
+	agony = 0
 	embed_chance = 0
 	sharp = 0
 	check_armour = "melee"
@@ -166,6 +174,7 @@
 	fire_sound = 'sound/weapons/Gunshot_generic_rifle.ogg'
 	armor_penetration = 15
 	penetrating = 1
+	agony = 30
 
 /obj/item/projectile/bullet/rifle/a762
 	fire_sound = 'sound/weapons/Gunshot_heavy.ogg'
@@ -188,6 +197,8 @@
 	damage = 20
 	SA_bonus_damage = 50 // 70 total on animals.
 	SA_vulnerability = SA_ANIMAL
+	embed_chance = 0 // Lets not require surgery for hunting rounds.
+	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/Gunshot_light.ogg'
@@ -206,8 +217,10 @@
 	damage = 15
 	SA_bonus_damage = 35 // 50 total on animals.
 	SA_vulnerability = SA_ANIMAL
+	embed_chance = 0
+	sharp = 0
 
-/obj/item/projectile/bullet/rifle/a145 // 14.5×114mm is bigger than a .50 BMG round.
+/obj/item/projectile/bullet/rifle/a145 // 14.5x114mm is bigger than a .50 BMG round.
 	fire_sound = 'sound/weapons/Gunshot_cannon.ogg' // This is literally an anti-tank rifle caliber. It better sound like a fucking cannon.
 	damage = 80
 	stun = 3
@@ -296,7 +309,7 @@
 /obj/item/projectile/bullet/practice
 	damage = 5
 
-/obj/item/projectile/bullet/pistol/cap // Just the primer, such as a cap gun.
+/obj/item/projectile/bullet/r9mm/cap // Just the primer, such as a cap gun.
 	name = "cap"
 	damage_type = HALLOSS
 	fire_sound = 'sound/effects/snap.ogg'
@@ -307,7 +320,7 @@
 
 	combustion = FALSE
 
-/obj/item/projectile/bullet/pistol/cap/process()
+/obj/item/projectile/bullet/r9mm/cap/process()
 	loc = null
 	qdel(src)
 

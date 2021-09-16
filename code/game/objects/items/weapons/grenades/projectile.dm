@@ -3,7 +3,7 @@
 	icon_state = "frggrenade"
 	item_state = "grenade"
 
-	var/list/projectile_types = list(/obj/item/projectile/bullet/pistol/rubber)	// What sorts of projectiles might we make?
+	var/list/projectile_types = list(/obj/item/projectile/bullet/rubber/r9mm)	// What sorts of projectiles might we make?
 
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
 	var/spread_range = 7
@@ -26,7 +26,7 @@
 /obj/item/weapon/grenade/shooter/rubber
 	name = "rubber pellet grenade"
 	desc = "An anti-riot grenade that fires a cloud of rubber projectiles upon detonation."
-	projectile_types = list(/obj/item/projectile/bullet/pistol/rubber)
+	projectile_types = list(/obj/item/projectile/bullet/rubber/r9mm)
 
 // Exists mostly so I don't have to copy+paste the sprite vars to a billion things
 /obj/item/weapon/grenade/shooter/energy
@@ -50,7 +50,7 @@
 
 
 // This is just fragmentate, but less specific. Don't know how to make either of them less awful, at the moment
-/obj/proc/launch_many_projectiles(var/turf/T=get_turf(src), var/spreading_range = 5, var/list/projectiletypes=list(/obj/item/projectile/bullet/pistol/rubber))
+/obj/proc/launch_many_projectiles(var/turf/T=get_turf(src), var/spreading_range = 5, var/list/projectiletypes=list(/obj/item/projectile/bullet/rubber/r9mm))
 	set waitfor = 0
 	var/list/target_turfs = getcircle(T, spreading_range)
 

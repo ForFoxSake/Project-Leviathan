@@ -5,6 +5,7 @@
 	//	if(!P.SA_vulnerability || P.SA_vulnerability == intelligence_level)
 		if(P.SA_vulnerability & mob_class)
 			P.damage += P.SA_bonus_damage
+			P.damage += P.agony / 2 // Add half of agony damage to projectile damage to make rubber bullets not useless on animals.
 
 	. = ..()
 

@@ -52,7 +52,7 @@
 	caliber = ".357"
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "rubber357"
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
+	projectile_type = /obj/item/projectile/bullet/rubber/r357
 
 /obj/item/ammo_magazine/s357/flash
 	name = "speedloader (.357 flash)"
@@ -73,7 +73,7 @@
 /obj/item/ammo_casing/a380
 	desc = "A .380 bullet casing."
 	caliber = ".380"
-	projectile_type = /obj/item/projectile/bullet/pistol
+	projectile_type = /obj/item/projectile/bullet/r9mm
 
 /obj/item/ammo_magazine/m380
 	name = "magazine (.380)"
@@ -90,7 +90,7 @@
 /obj/item/ammo_casing/a44/rubber
 	icon_state = "r-casing"
 	desc = "A .44 rubber bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
+	projectile_type = /obj/item/projectile/bullet/rubber/r357
 
 /obj/item/ammo_magazine/m44/rubber
 	desc = "A magazine for .44 less-than-lethal ammo."
